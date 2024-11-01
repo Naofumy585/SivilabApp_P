@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45328FF4-CB42-4A8D-91D6-66ACC1623055}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SivilabApp</RootNamespace>
+    <AssemblyName>SivilabApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SivilabApp.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buscar Dependencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar Dependencia.Designer.cs">
+      <DependentUpon>Buscar Dependencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarDependencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarDependencia.Designer.cs">
+      <DependentUpon>BuscarDependencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEventos.Designer.cs">
+      <DependentUpon>ConsultarEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarVacantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarVacantes.Designer.cs">
+      <DependentUpon>ConsultarVacantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles_Usuario\RegistrarCita_cu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles_Usuario\RegistrarCita_cu.Designer.cs">
+      <DependentUpon>RegistrarCita_cu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarVacante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarVacante.Designer.cs">
+      <DependentUpon>EditarVacante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fcita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fcita.Designer.cs">
+      <DependentUpon>Fcita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paginainicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginainicio.Designer.cs">
+      <DependentUpon>Paginainicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSolicitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSolicitante.Designer.cs">
+      <DependentUpon>FSolicitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FVacantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVacantes.Designer.cs">
+      <DependentUpon>FVacantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Iniciarsesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Iniciarsesion.Designer.cs">
+      <DependentUpon>Iniciarsesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panelContenido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="panelContenido.Designer.cs">
+      <DependentUpon>panelContenido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarVacante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarVacante.Designer.cs">
+      <DependentUpon>RegistrarVacante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarCita.Designer.cs">
+      <DependentUpon>RegistrarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarSolicitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarSolicitante.Designer.cs">
+      <DependentUpon>RegistrarSolicitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro de Empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro de Empresa.Designer.cs">
+      <DependentUpon>Registro de Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroEvento.Designer.cs">
+      <DependentUpon>RegistroEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles_Usuario\Citas_cu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles_Usuario\Citas_cu.Designer.cs">
+      <DependentUpon>Citas_cu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacantesconEnvios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacantesconEnvios.Designer.cs">
+      <DependentUpon>VacantesconEnvios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacantessinEnvios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacantessinEnvios.Designer.cs">
+      <DependentUpon>VacantessinEnvios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Buscar Dependencia.resx">
+      <DependentUpon>Buscar Dependencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarDependencia.resx">
+      <DependentUpon>BuscarDependencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEventos.resx">
+      <DependentUpon>ConsultarEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarVacantes.resx">
+      <DependentUpon>ConsultarVacantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles_Usuario\Citas_cu.resx">
+      <DependentUpon>Citas_cu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles_Usuario\RegistrarCita_cu.resx">
+      <DependentUpon>RegistrarCita_cu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarVacante.resx">
+      <DependentUpon>EditarVacante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fcita.resx">
+      <DependentUpon>Fcita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginainicio.resx">
+      <DependentUpon>Paginainicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSolicitante.resx">
+      <DependentUpon>FSolicitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVacantes.resx">
+      <DependentUpon>FVacantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Iniciarsesion.resx">
+      <DependentUpon>Iniciarsesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panelContenido.resx">
+      <DependentUpon>panelContenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegistrarVacante.resx">
+      <DependentUpon>RegistrarVacante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarCita.resx">
+      <DependentUpon>RegistrarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarSolicitante.resx">
+      <DependentUpon>RegistrarSolicitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro de Empresa.resx">
+      <DependentUpon>Registro de Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroEvento.resx">
+      <DependentUpon>RegistroEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacantesconEnvios.resx">
+      <DependentUpon>VacantesconEnvios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacantessinEnvios.resx">
+      <DependentUpon>VacantessinEnvios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\Fondo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
