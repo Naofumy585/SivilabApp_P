@@ -257,6 +257,7 @@
             this.txbBienvenido.Size = new System.Drawing.Size(123, 20);
             this.txbBienvenido.TabIndex = 19;
             this.txbBienvenido.Text = "Bienvenid@:";
+            this.txbBienvenido.TextChanged += new System.EventHandler(this.txbBienvenido_TextChanged);
             // 
             // SivilabApp
             // 

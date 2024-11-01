@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txbcontraseña = new System.Windows.Forms.TextBox();
+            this.txbcontrasena = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -126,12 +126,12 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "CONTRASEÑA";
             // 
-            // txbcontraseña
+            // txbcontrasena
             // 
-            this.txbcontraseña.Location = new System.Drawing.Point(247, 252);
-            this.txbcontraseña.Name = "txbcontraseña";
-            this.txbcontraseña.Size = new System.Drawing.Size(100, 20);
-            this.txbcontraseña.TabIndex = 21;
+            this.txbcontrasena.Location = new System.Drawing.Point(247, 252);
+            this.txbcontrasena.Name = "txbcontrasena";
+            this.txbcontrasena.Size = new System.Drawing.Size(100, 20);
+            this.txbcontrasena.TabIndex = 21;
             // 
             // btnIngresar
             // 
@@ -154,7 +154,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(525, 450);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.txbcontraseña);
+            this.Controls.Add(this.txbcontrasena);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -184,7 +184,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbcontraseña;
+        private System.Windows.Forms.TextBox txbcontrasena;
         private System.Windows.Forms.Button btnIngresar;
     }
 }

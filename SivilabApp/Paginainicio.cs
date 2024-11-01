@@ -7,15 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using SivilabApp;
+using MySql.Data.MySqlClient;
 
 namespace SivilabApp
 {
     public partial class SivilabApp : Form
     {
+        private string nombreUsuario;
+        public SivilabApp(string nombreUsuario)
+        {
+            InitializeComponent();
+            this.nombreUsuario = nombreUsuario; // Guardar el nombre de usuario
+        }
         public SivilabApp()
         {
             InitializeComponent();
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -24,7 +34,9 @@ namespace SivilabApp
 
         private void SivilabApp_Load(object sender, EventArgs e)
         {
-
+            // Limpiar el texto del TextBox y mostrar el nombre del usuario
+            txbBienvenido.Text = ""; // Borra cualquier texto anterior
+            txbBienvenido.Text = $"Hola, {nombreUsuario}!"; // Asignar el nombre del usuario
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -34,26 +46,11 @@ namespace SivilabApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Limpiar cualquier instancia previa de Citas_cu en el formulario
-            foreach (Control control in this.Controls)
-            {
-                if (control is Citas_cu)
-                {
-                    this.Controls.Remove(control);
-                    control.Dispose(); // Liberar recursos del control removido
-                }
-            }
+            // Crear una instancia del formulario Fcita
+            Fcita formCita = new Fcita();
 
-            // Crear una nueva instancia de Citas_cu
-            Citas_cu citasControl = new Citas_cu
-            {
-                Location = new Point(10, 100), // Establecer ubicación para que aparezca debajo de los botones
-                Width = 500,                   // Ajustar ancho del control
-                Height = 300                   // Ajustar altura del control
-            };
-
-            // Agregar Citas_cu al formulario
-            this.Controls.Add(citasControl);
+            // Mostrar el formulario
+            formCita.Show(); // Usa ShowDialog() si quieres que sea modal
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -97,6 +94,11 @@ namespace SivilabApp
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbBienvenido_TextChanged(object sender, EventArgs e)
         {
 
         }

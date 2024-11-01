@@ -19,14 +19,28 @@ namespace SivilabApp
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            // Crear una nueva instancia de Form1
-            SivilabApp form1 = new SivilabApp();
+            // Obtener los valores ingresados
+            string nombreUsuario = txbusuario.Text.Trim(); // Quitar espacios en blanco
+            string contraseña = txbcontrasena.Text.Trim(); // Quitar espacios en blanco
 
-            // Mostrar el Form1
-            form1.Show();
+            // Crear una instancia de Metodos
+            Metodos metodos = new Metodos();
 
-            // Opcional: Ocultar el formulario actual (el formulario donde está el botón Ingresar)
-            this.Hide();
+            // Validar el usuario
+            if (metodos.ValidarUsuario(nombreUsuario, contraseña))
+            {
+                // Si el usuario es válido, abrir el formulario principal y pasar el nombre de usuario
+                SivilabApp form1 = new SivilabApp(nombreUsuario);
+                form1.Show();
+
+                // Ocultar el formulario de inicio de sesión
+                this.Hide();
+            }
+            else
+            {
+                // Si el usuario no es válido, mostrar un mensaje de error
+                MessageBox.Show("Usuario o contraseña incorrectos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
