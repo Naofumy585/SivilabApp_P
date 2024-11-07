@@ -1,36 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using SivilabApp;
-using MySql.Data.MySqlClient;
 
 namespace SivilabApp
 {
-    public class ConexionSql
+    public class ConexionSql : IDisposable
     {
-        MySqlConnection conexion = new MySqlConnection();
-        static string servidor = "localhost";
-        static string BD = "bolsa_trabajo";
-        static string Usuario = "root";
-        static string Password = "Mamado780";
-        static string Puerto = "3306";
+        private readonly string servidor = "localhost";
+        private readonly string bd = "bolsa_trabajo";
+        private readonly string usuario = "root";
+        private readonly string password = "Mamado780"; // Considera mover esto a un archivo de configuración
+        private readonly string puerto = "3306";
 
-        string cadenaconexion = "server=" + servidor + ";" + "port=" + Puerto + ";" + "user id=" + Usuario + ";" + "password=" + Password + ";" + "database=" + BD + ";";
+        private string cadenaConexion;
+        private MySqlConnection _conexion;
+        private bool _disposed = false; // Para detectar llamadas redundantes
+
+        public ConexionSql()
+        {
+            cadenaConexion = $"server={servidor};port={puerto};user id={usuario};password={password};database={bd};";
+            _conexion = new MySqlConnection(cadenaConexion);
+        }
 
         public MySqlConnection EstablecerConexion()
         {
             try
             {
-                conexion.ConnectionString = cadenaconexion;
-                conexion.Open();
-                return conexion; // Retorna la conexión abierta
+                _conexion.Open();
+                return _conexion; // Retorna la conexión abierta
             }
             catch (Exception ex)
             {
@@ -38,11 +38,30 @@ namespace SivilabApp
                 return null; // Retorna null si no se pudo abrir la conexión
             }
         }
-        public void CerrarConexion()
+
+        public void Dispose()
         {
-            if (conexion != null && conexion.State == System.Data.ConnectionState.Open)
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!_disposed)
             {
-                conexion.Close();
+                if (disposing)
+                {
+                    // Liberar los recursos administrados
+                    if (_conexion != null)
+                    {
+                        _conexion.Close();
+                        _conexion.Dispose();
+                    }
+                }
+
+                // Liberar recursos no administrados aquí (si los hubiera)
+
+                _disposed = true;
             }
         }
     }

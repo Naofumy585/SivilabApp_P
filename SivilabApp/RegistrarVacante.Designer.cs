@@ -33,46 +33,37 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Vigencia = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.txbFolio = new System.Windows.Forms.TextBox();
+            this.CvcVacante = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txbPuesto = new System.Windows.Forms.TextBox();
+            this.Puesto_solicta = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cxbTipoVacnte = new System.Windows.Forms.ComboBox();
+            this.Tipo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Otras_prestaciones = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbxTurnoLaboral = new System.Windows.Forms.ComboBox();
+            this.Modalidad = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbxCausaorigen = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txbSalarioMensual = new System.Windows.Forms.TextBox();
+            this.SalarioM = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txbNumPlaza = new System.Windows.Forms.TextBox();
+            this.No_pla = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.Horas = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.cbxEscolaridad = new System.Windows.Forms.ComboBox();
+            this.Escolaridad = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.cbxEdoCivil = new System.Windows.Forms.ComboBox();
+            this.Estado_civil = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.cbxGenero = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cbxCartilla = new System.Windows.Forms.ComboBox();
+            this.Sexo = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.cxbRangoE = new System.Windows.Forms.ComboBox();
+            this.Rango_edad = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.Licencia_de_manejo = new System.Windows.Forms.CheckBox();
+            this.Cartilla = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -122,12 +113,12 @@
             this.label3.Text = "Fecha de Registro:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // dateTimePicker1
+            // Vigencia
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(155, 132);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(89, 20);
-            this.dateTimePicker1.TabIndex = 20;
+            this.Vigencia.Location = new System.Drawing.Point(155, 132);
+            this.Vigencia.Name = "Vigencia";
+            this.Vigencia.Size = new System.Drawing.Size(89, 20);
+            this.Vigencia.TabIndex = 20;
             // 
             // label4
             // 
@@ -140,12 +131,12 @@
             this.label4.Text = "Folio SILAP:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txbFolio
+            // CvcVacante
             // 
-            this.txbFolio.Location = new System.Drawing.Point(639, 136);
-            this.txbFolio.Name = "txbFolio";
-            this.txbFolio.Size = new System.Drawing.Size(96, 20);
-            this.txbFolio.TabIndex = 22;
+            this.CvcVacante.Location = new System.Drawing.Point(656, 135);
+            this.CvcVacante.Name = "CvcVacante";
+            this.CvcVacante.Size = new System.Drawing.Size(96, 20);
+            this.CvcVacante.TabIndex = 22;
             // 
             // label5
             // 
@@ -157,12 +148,12 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Puesto Ofrecido:";
             // 
-            // txbPuesto
+            // Puesto_solicta
             // 
-            this.txbPuesto.Location = new System.Drawing.Point(148, 177);
-            this.txbPuesto.Name = "txbPuesto";
-            this.txbPuesto.Size = new System.Drawing.Size(249, 20);
-            this.txbPuesto.TabIndex = 24;
+            this.Puesto_solicta.Location = new System.Drawing.Point(148, 177);
+            this.Puesto_solicta.Name = "Puesto_solicta";
+            this.Puesto_solicta.Size = new System.Drawing.Size(249, 20);
+            this.Puesto_solicta.TabIndex = 24;
             // 
             // label6
             // 
@@ -175,16 +166,16 @@
             this.label6.Text = "Tipo Vacante:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // cxbTipoVacnte
+            // Tipo
             // 
-            this.cxbTipoVacnte.FormattingEnabled = true;
-            this.cxbTipoVacnte.Items.AddRange(new object[] {
+            this.Tipo.FormattingEnabled = true;
+            this.Tipo.Items.AddRange(new object[] {
             "Bolsa de trabajo",
             "Trabajo Fijo"});
-            this.cxbTipoVacnte.Location = new System.Drawing.Point(148, 222);
-            this.cxbTipoVacnte.Name = "cxbTipoVacnte";
-            this.cxbTipoVacnte.Size = new System.Drawing.Size(249, 21);
-            this.cxbTipoVacnte.TabIndex = 26;
+            this.Tipo.Location = new System.Drawing.Point(148, 222);
+            this.Tipo.Name = "Tipo";
+            this.Tipo.Size = new System.Drawing.Size(249, 21);
+            this.Tipo.TabIndex = 26;
             // 
             // label7
             // 
@@ -196,16 +187,16 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "Tipo Contrato:";
             // 
-            // comboBox1
+            // Otras_prestaciones
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Otras_prestaciones.FormattingEnabled = true;
+            this.Otras_prestaciones.Items.AddRange(new object[] {
             "Permanente ",
             "Tiempo Completo"});
-            this.comboBox1.Location = new System.Drawing.Point(662, 217);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(117, 21);
-            this.comboBox1.TabIndex = 28;
+            this.Otras_prestaciones.Location = new System.Drawing.Point(656, 217);
+            this.Otras_prestaciones.Name = "Otras_prestaciones";
+            this.Otras_prestaciones.Size = new System.Drawing.Size(117, 21);
+            this.Otras_prestaciones.TabIndex = 28;
             // 
             // label8
             // 
@@ -217,18 +208,18 @@
             this.label8.TabIndex = 29;
             this.label8.Text = "Turno Laboral:";
             // 
-            // cbxTurnoLaboral
+            // Modalidad
             // 
-            this.cbxTurnoLaboral.FormattingEnabled = true;
-            this.cbxTurnoLaboral.Items.AddRange(new object[] {
+            this.Modalidad.FormattingEnabled = true;
+            this.Modalidad.Items.AddRange(new object[] {
             "Mixto",
             "Medio Tiempo",
             "Tiempo Completo"});
-            this.cbxTurnoLaboral.Location = new System.Drawing.Point(134, 265);
-            this.cbxTurnoLaboral.Name = "cbxTurnoLaboral";
-            this.cbxTurnoLaboral.Size = new System.Drawing.Size(122, 21);
-            this.cbxTurnoLaboral.TabIndex = 30;
-            this.cbxTurnoLaboral.SelectedIndexChanged += new System.EventHandler(this.cbxTurnoLaboral_SelectedIndexChanged);
+            this.Modalidad.Location = new System.Drawing.Point(134, 265);
+            this.Modalidad.Name = "Modalidad";
+            this.Modalidad.Size = new System.Drawing.Size(122, 21);
+            this.Modalidad.TabIndex = 30;
+            this.Modalidad.SelectedIndexChanged += new System.EventHandler(this.cbxTurnoLaboral_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -236,19 +227,8 @@
             this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(568, 273);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 13);
+            this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 31;
-            this.label9.Text = "Causa de Origen";
-            // 
-            // cbxCausaorigen
-            // 
-            this.cbxCausaorigen.FormattingEnabled = true;
-            this.cbxCausaorigen.Items.AddRange(new object[] {
-            "Reposicíon de Personal"});
-            this.cbxCausaorigen.Location = new System.Drawing.Point(659, 265);
-            this.cbxCausaorigen.Name = "cbxCausaorigen";
-            this.cbxCausaorigen.Size = new System.Drawing.Size(117, 21);
-            this.cbxCausaorigen.TabIndex = 32;
             // 
             // label10
             // 
@@ -260,12 +240,12 @@
             this.label10.TabIndex = 33;
             this.label10.Text = "Salario Mensual:";
             // 
-            // txbSalarioMensual
+            // SalarioM
             // 
-            this.txbSalarioMensual.Location = new System.Drawing.Point(143, 315);
-            this.txbSalarioMensual.Name = "txbSalarioMensual";
-            this.txbSalarioMensual.Size = new System.Drawing.Size(77, 20);
-            this.txbSalarioMensual.TabIndex = 34;
+            this.SalarioM.Location = new System.Drawing.Point(143, 315);
+            this.SalarioM.Name = "SalarioM";
+            this.SalarioM.Size = new System.Drawing.Size(77, 20);
+            this.SalarioM.TabIndex = 34;
             // 
             // label11
             // 
@@ -278,12 +258,12 @@
             this.label11.Text = "N° Plazas";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // txbNumPlaza
+            // No_pla
             // 
-            this.txbNumPlaza.Location = new System.Drawing.Point(329, 319);
-            this.txbNumPlaza.Name = "txbNumPlaza";
-            this.txbNumPlaza.Size = new System.Drawing.Size(77, 20);
-            this.txbNumPlaza.TabIndex = 36;
+            this.No_pla.Location = new System.Drawing.Point(329, 319);
+            this.No_pla.Name = "No_pla";
+            this.No_pla.Size = new System.Drawing.Size(77, 20);
+            this.No_pla.TabIndex = 36;
             // 
             // label12
             // 
@@ -295,50 +275,12 @@
             this.label12.TabIndex = 37;
             this.label12.Text = "Horario De";
             // 
-            // textBox1
+            // Horas
             // 
-            this.textBox1.Location = new System.Drawing.Point(530, 319);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(77, 20);
-            this.textBox1.TabIndex = 38;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(613, 326);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 13);
-            this.label13.TabIndex = 39;
-            this.label13.Text = "hrs";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(656, 326);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 13);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "a";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(675, 319);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(77, 20);
-            this.textBox2.TabIndex = 41;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(758, 326);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(21, 13);
-            this.label15.TabIndex = 42;
-            this.label15.Text = "hrs";
+            this.Horas.Location = new System.Drawing.Point(530, 319);
+            this.Horas.Name = "Horas";
+            this.Horas.Size = new System.Drawing.Size(77, 20);
+            this.Horas.TabIndex = 38;
             // 
             // label16
             // 
@@ -362,22 +304,22 @@
             this.label17.TabIndex = 44;
             this.label17.Text = "Escolaridad:";
             // 
-            // cbxEscolaridad
+            // Escolaridad
             // 
-            this.cbxEscolaridad.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Escolaridad.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.cbxEscolaridad.FormattingEnabled = true;
-            this.cbxEscolaridad.Items.AddRange(new object[] {
+            this.Escolaridad.FormattingEnabled = true;
+            this.Escolaridad.Items.AddRange(new object[] {
             "Mixto",
             "Medio Tiempo",
             "Tiempo Completo"});
-            this.cbxEscolaridad.Location = new System.Drawing.Point(122, 411);
-            this.cbxEscolaridad.Name = "cbxEscolaridad";
-            this.cbxEscolaridad.Size = new System.Drawing.Size(122, 21);
-            this.cbxEscolaridad.TabIndex = 45;
+            this.Escolaridad.Location = new System.Drawing.Point(122, 411);
+            this.Escolaridad.Name = "Escolaridad";
+            this.Escolaridad.Size = new System.Drawing.Size(122, 21);
+            this.Escolaridad.TabIndex = 45;
             // 
             // label18
             // 
@@ -389,22 +331,22 @@
             this.label18.TabIndex = 46;
             this.label18.Text = "Estado Civil:";
             // 
-            // cbxEdoCivil
+            // Estado_civil
             // 
-            this.cbxEdoCivil.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Estado_civil.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.cbxEdoCivil.FormattingEnabled = true;
-            this.cbxEdoCivil.Items.AddRange(new object[] {
+            this.Estado_civil.FormattingEnabled = true;
+            this.Estado_civil.Items.AddRange(new object[] {
             "SOLTERO",
             "CASADO",
             "UNION LIBRE"});
-            this.cbxEdoCivil.Location = new System.Drawing.Point(601, 411);
-            this.cbxEdoCivil.Name = "cbxEdoCivil";
-            this.cbxEdoCivil.Size = new System.Drawing.Size(122, 21);
-            this.cbxEdoCivil.TabIndex = 47;
+            this.Estado_civil.Location = new System.Drawing.Point(601, 411);
+            this.Estado_civil.Name = "Estado_civil";
+            this.Estado_civil.Size = new System.Drawing.Size(122, 21);
+            this.Estado_civil.TabIndex = 47;
             // 
             // label19
             // 
@@ -416,96 +358,42 @@
             this.label19.TabIndex = 48;
             this.label19.Text = "Genero:";
             // 
-            // cbxGenero
+            // Sexo
             // 
-            this.cbxGenero.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Sexo.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.cbxGenero.FormattingEnabled = true;
-            this.cbxGenero.Items.AddRange(new object[] {
+            this.Sexo.FormattingEnabled = true;
+            this.Sexo.Items.AddRange(new object[] {
             "FEMENINO",
             "MASCULINO",
             "AMBOS"});
-            this.cbxGenero.Location = new System.Drawing.Point(122, 455);
-            this.cbxGenero.Name = "cbxGenero";
-            this.cbxGenero.Size = new System.Drawing.Size(122, 21);
-            this.cbxGenero.TabIndex = 49;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(492, 458);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(103, 13);
-            this.label20.TabIndex = 50;
-            this.label20.Text = "Lienecia de Manejo:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.AutoCompleteCustomSource.AddRange(new string[] {
-            "NINGUNA",
-            "PRIMARIA",
-            "SECUNDARIA",
-            "SUPERIOR"});
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "AUTOMOVIL",
-            "MOTOCICLETA",
-            "CAMION",
-            "NINGUNA"});
-            this.comboBox2.Location = new System.Drawing.Point(601, 455);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(122, 21);
-            this.comboBox2.TabIndex = 51;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(52, 513);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 13);
-            this.label21.TabIndex = 52;
-            this.label21.Text = "Cartilla:";
-            // 
-            // cbxCartilla
-            // 
-            this.cbxCartilla.AutoCompleteCustomSource.AddRange(new string[] {
-            "NINGUNA",
-            "PRIMARIA",
-            "SECUNDARIA",
-            "SUPERIOR"});
-            this.cbxCartilla.FormattingEnabled = true;
-            this.cbxCartilla.Items.AddRange(new object[] {
-            "MILITAR",
-            "NINGUNA"});
-            this.cbxCartilla.Location = new System.Drawing.Point(122, 505);
-            this.cbxCartilla.Name = "cbxCartilla";
-            this.cbxCartilla.Size = new System.Drawing.Size(122, 21);
-            this.cbxCartilla.TabIndex = 53;
+            this.Sexo.Location = new System.Drawing.Point(122, 455);
+            this.Sexo.Name = "Sexo";
+            this.Sexo.Size = new System.Drawing.Size(122, 21);
+            this.Sexo.TabIndex = 49;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label22.Location = new System.Drawing.Point(502, 513);
+            this.label22.Location = new System.Drawing.Point(510, 463);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(85, 13);
             this.label22.TabIndex = 54;
             this.label22.Text = "Rango de Edad:";
             // 
-            // cxbRangoE
+            // Rango_edad
             // 
-            this.cxbRangoE.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Rango_edad.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.cxbRangoE.FormattingEnabled = true;
-            this.cxbRangoE.Items.AddRange(new object[] {
+            this.Rango_edad.FormattingEnabled = true;
+            this.Rango_edad.Items.AddRange(new object[] {
             "18-20",
             "20-25",
             "25-30",
@@ -517,10 +405,10 @@
             "55-60",
             "60-65",
             "70-80"});
-            this.cxbRangoE.Location = new System.Drawing.Point(601, 505);
-            this.cxbRangoE.Name = "cxbRangoE";
-            this.cxbRangoE.Size = new System.Drawing.Size(122, 21);
-            this.cxbRangoE.TabIndex = 55;
+            this.Rango_edad.Location = new System.Drawing.Point(601, 455);
+            this.Rango_edad.Name = "Rango_edad";
+            this.Rango_edad.Size = new System.Drawing.Size(122, 21);
+            this.Rango_edad.TabIndex = 55;
             // 
             // checkBox1
             // 
@@ -544,27 +432,27 @@
             this.checkBox2.Text = "Disponibilidad Para Radicar Fuera";
             this.checkBox2.UseVisualStyleBackColor = false;
             // 
-            // checkBox3
+            // Licencia_de_manejo
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.checkBox3.Location = new System.Drawing.Point(483, 597);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(140, 17);
-            this.checkBox3.TabIndex = 58;
-            this.checkBox3.Text = "Licencia de Motociclista";
-            this.checkBox3.UseVisualStyleBackColor = false;
+            this.Licencia_de_manejo.AutoSize = true;
+            this.Licencia_de_manejo.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.Licencia_de_manejo.Location = new System.Drawing.Point(483, 597);
+            this.Licencia_de_manejo.Name = "Licencia_de_manejo";
+            this.Licencia_de_manejo.Size = new System.Drawing.Size(66, 17);
+            this.Licencia_de_manejo.TabIndex = 58;
+            this.Licencia_de_manejo.Text = "Licencia";
+            this.Licencia_de_manejo.UseVisualStyleBackColor = false;
             // 
-            // checkBox4
+            // Cartilla
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.checkBox4.Location = new System.Drawing.Point(702, 597);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(74, 17);
-            this.checkBox4.TabIndex = 59;
-            this.checkBox4.Text = "Pasaporte";
-            this.checkBox4.UseVisualStyleBackColor = false;
+            this.Cartilla.AutoSize = true;
+            this.Cartilla.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.Cartilla.Location = new System.Drawing.Point(702, 597);
+            this.Cartilla.Name = "Cartilla";
+            this.Cartilla.Size = new System.Drawing.Size(57, 17);
+            this.Cartilla.TabIndex = 59;
+            this.Cartilla.Text = "Cartilla";
+            this.Cartilla.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -594,46 +482,37 @@
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(902, 688);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.Cartilla);
+            this.Controls.Add(this.Licencia_de_manejo);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.cxbRangoE);
+            this.Controls.Add(this.Rango_edad);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.cbxCartilla);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.cbxGenero);
+            this.Controls.Add(this.Sexo);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.cbxEdoCivil);
+            this.Controls.Add(this.Estado_civil);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.cbxEscolaridad);
+            this.Controls.Add(this.Escolaridad);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Horas);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txbNumPlaza);
+            this.Controls.Add(this.No_pla);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txbSalarioMensual);
+            this.Controls.Add(this.SalarioM);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.cbxCausaorigen);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cbxTurnoLaboral);
+            this.Controls.Add(this.Modalidad);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Otras_prestaciones);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cxbTipoVacnte);
+            this.Controls.Add(this.Tipo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txbPuesto);
+            this.Controls.Add(this.Puesto_solicta);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txbFolio);
+            this.Controls.Add(this.CvcVacante);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Vigencia);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -654,46 +533,37 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Vigencia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txbFolio;
+        private System.Windows.Forms.TextBox CvcVacante;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txbPuesto;
+        private System.Windows.Forms.TextBox Puesto_solicta;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cxbTipoVacnte;
+        private System.Windows.Forms.ComboBox Tipo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Otras_prestaciones;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbxTurnoLaboral;
+        private System.Windows.Forms.ComboBox Modalidad;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbxCausaorigen;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txbSalarioMensual;
+        private System.Windows.Forms.TextBox SalarioM;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txbNumPlaza;
+        private System.Windows.Forms.TextBox No_pla;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox Horas;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox cbxEscolaridad;
+        private System.Windows.Forms.ComboBox Escolaridad;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox cbxEdoCivil;
+        private System.Windows.Forms.ComboBox Estado_civil;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox cbxGenero;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox cbxCartilla;
+        private System.Windows.Forms.ComboBox Sexo;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox cxbRangoE;
+        private System.Windows.Forms.ComboBox Rango_edad;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox Licencia_de_manejo;
+        private System.Windows.Forms.CheckBox Cartilla;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

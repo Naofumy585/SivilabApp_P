@@ -50,6 +50,7 @@ namespace SivilabApp
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.Registrar_dependecia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -235,7 +236,7 @@ namespace SivilabApp
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(90)))));
-            this.pictureBox3.Location = new System.Drawing.Point(17, 96);
+            this.pictureBox3.Location = new System.Drawing.Point(24, 96);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(891, 10);
             this.pictureBox3.TabIndex = 154;
@@ -262,11 +263,22 @@ namespace SivilabApp
             this.label10.Text = "Buscar Dependencia";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
+            // Registrar_dependecia
+            // 
+            this.Registrar_dependecia.Location = new System.Drawing.Point(769, 183);
+            this.Registrar_dependecia.Name = "Registrar_dependecia";
+            this.Registrar_dependecia.Size = new System.Drawing.Size(123, 23);
+            this.Registrar_dependecia.TabIndex = 157;
+            this.Registrar_dependecia.Text = "Registrar_dependecia";
+            this.Registrar_dependecia.UseVisualStyleBackColor = true;
+            this.Registrar_dependecia.Click += new System.EventHandler(this.Registrar_dependecia_Click);
+            // 
             // Buscar_Dependencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 478);
+            this.Controls.Add(this.Registrar_dependecia);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -289,6 +301,7 @@ namespace SivilabApp
             this.Controls.Add(this.dataGridView1);
             this.Name = "Buscar_Dependencia";
             this.Text = "Buscar_Dependencia";
+            this.Load += new System.EventHandler(this.Buscar_Dependencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -322,5 +335,6 @@ namespace SivilabApp
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button Registrar_dependecia;
     }
 }

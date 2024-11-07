@@ -38,43 +38,43 @@ namespace SivilabApp
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.txbSalarioMensual = new System.Windows.Forms.TextBox();
+            this.Nombre = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CvcDependencia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.RFC_dependencia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.Colonia = new System.Windows.Forms.ComboBox();
+            this.calle = new System.Windows.Forms.TextBox();
+            this.Telefono = new System.Windows.Forms.TextBox();
+            this.Contrasena_usuario = new System.Windows.Forms.TextBox();
+            this.Actividad_economica = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Observaciones = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Cuenta = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.Codigo_Postal = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.Correo = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.Puesto = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.Dias_duracion = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.Ca = new System.Windows.Forms.TextBox();
+            this.labe = new System.Windows.Forms.Label();
+            this.No_ext = new System.Windows.Forms.TextBox();
+            this.Estado = new System.Windows.Forms.ComboBox();
+            this.Hora = new System.Windows.Forms.DateTimePicker();
+            this.Ciudad = new System.Windows.Forms.ComboBox();
+            this.No_trabajadores = new System.Windows.Forms.TextBox();
+            this.Tipo_servicio = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -135,9 +135,10 @@ namespace SivilabApp
             this.label19.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label19.Location = new System.Drawing.Point(101, 311);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(55, 13);
+            this.label19.Size = new System.Drawing.Size(30, 13);
             this.label19.TabIndex = 103;
-            this.label19.Text = "Dirección:";
+            this.label19.Text = "Calle";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label18
             // 
@@ -159,12 +160,12 @@ namespace SivilabApp
             this.label17.TabIndex = 100;
             this.label17.Text = "Estado:";
             // 
-            // txbSalarioMensual
+            // Nombre
             // 
-            this.txbSalarioMensual.Location = new System.Drawing.Point(192, 158);
-            this.txbSalarioMensual.Name = "txbSalarioMensual";
-            this.txbSalarioMensual.Size = new System.Drawing.Size(436, 20);
-            this.txbSalarioMensual.TabIndex = 99;
+            this.Nombre.Location = new System.Drawing.Point(192, 158);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(436, 20);
+            this.Nombre.TabIndex = 99;
             // 
             // label10
             // 
@@ -187,12 +188,12 @@ namespace SivilabApp
             this.label8.Text = "Folio SIISNE:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // textBox1
+            // CvcDependencia
             // 
-            this.textBox1.Location = new System.Drawing.Point(192, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 20);
-            this.textBox1.TabIndex = 111;
+            this.CvcDependencia.Location = new System.Drawing.Point(192, 121);
+            this.CvcDependencia.Name = "CvcDependencia";
+            this.CvcDependencia.Size = new System.Drawing.Size(122, 20);
+            this.CvcDependencia.TabIndex = 111;
             // 
             // label2
             // 
@@ -204,12 +205,12 @@ namespace SivilabApp
             this.label2.TabIndex = 112;
             this.label2.Text = "RFC:";
             // 
-            // textBox2
+            // RFC_dependencia
             // 
-            this.textBox2.Location = new System.Drawing.Point(192, 194);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 20);
-            this.textBox2.TabIndex = 113;
+            this.RFC_dependencia.Location = new System.Drawing.Point(192, 194);
+            this.RFC_dependencia.Name = "RFC_dependencia";
+            this.RFC_dependencia.Size = new System.Drawing.Size(141, 20);
+            this.RFC_dependencia.TabIndex = 113;
             // 
             // label3
             // 
@@ -221,86 +222,63 @@ namespace SivilabApp
             this.label3.TabIndex = 115;
             this.label3.Text = "Colonia:";
             // 
-            // comboBox1
+            // Colonia
             // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Colonia.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "FEMENINO",
-            "MASCULINO",
-            "AMBOS"});
-            this.comboBox1.Location = new System.Drawing.Point(192, 231);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(166, 21);
-            this.comboBox1.TabIndex = 116;
+            this.Colonia.FormattingEnabled = true;
+            this.Colonia.Items.AddRange(new object[] {
+            "Barrio San Francisco",
+            "Xamaipak",
+            "Centro Poniente",
+            "Centro Oriente",
+            "Quinta norte"});
+            this.Colonia.Location = new System.Drawing.Point(192, 271);
+            this.Colonia.Name = "Colonia";
+            this.Colonia.Size = new System.Drawing.Size(166, 21);
+            this.Colonia.TabIndex = 117;
             // 
-            // comboBox2
+            // calle
             // 
-            this.comboBox2.AutoCompleteCustomSource.AddRange(new string[] {
+            this.calle.Location = new System.Drawing.Point(192, 309);
+            this.calle.Name = "calle";
+            this.calle.Size = new System.Drawing.Size(222, 20);
+            this.calle.TabIndex = 118;
+            // 
+            // Telefono
+            // 
+            this.Telefono.Location = new System.Drawing.Point(192, 347);
+            this.Telefono.Name = "Telefono";
+            this.Telefono.Size = new System.Drawing.Size(141, 20);
+            this.Telefono.TabIndex = 119;
+            this.Telefono.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // Contrasena_usuario
+            // 
+            this.Contrasena_usuario.Location = new System.Drawing.Point(591, 194);
+            this.Contrasena_usuario.Name = "Contrasena_usuario";
+            this.Contrasena_usuario.Size = new System.Drawing.Size(115, 20);
+            this.Contrasena_usuario.TabIndex = 121;
+            // 
+            // Actividad_economica
+            // 
+            this.Actividad_economica.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "FEMENINO",
-            "MASCULINO",
-            "AMBOS"});
-            this.comboBox2.Location = new System.Drawing.Point(192, 271);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(166, 21);
-            this.comboBox2.TabIndex = 117;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(192, 309);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 20);
-            this.textBox3.TabIndex = 118;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(192, 347);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(141, 20);
-            this.textBox4.TabIndex = 119;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(192, 424);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 20);
-            this.textBox5.TabIndex = 120;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(591, 194);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(115, 20);
-            this.textBox6.TabIndex = 121;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.AutoCompleteCustomSource.AddRange(new string[] {
-            "NINGUNA",
-            "PRIMARIA",
-            "SECUNDARIA",
-            "SUPERIOR"});
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "FEMENINO",
-            "MASCULINO",
-            "AMBOS"});
-            this.comboBox3.Location = new System.Drawing.Point(192, 385);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(166, 21);
-            this.comboBox3.TabIndex = 122;
+            this.Actividad_economica.FormattingEnabled = true;
+            this.Actividad_economica.Items.AddRange(new object[] {
+            "ACTIVO",
+            "INACTIVO"});
+            this.Actividad_economica.Location = new System.Drawing.Point(192, 385);
+            this.Actividad_economica.Name = "Actividad_economica";
+            this.Actividad_economica.Size = new System.Drawing.Size(166, 21);
+            this.Actividad_economica.TabIndex = 122;
+            this.Actividad_economica.SelectedIndexChanged += new System.EventHandler(this.Actividad_economica_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -322,12 +300,12 @@ namespace SivilabApp
             this.label5.TabIndex = 124;
             this.label5.Text = "Entrevista:";
             // 
-            // textBox7
+            // Observaciones
             // 
-            this.textBox7.Location = new System.Drawing.Point(192, 464);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(222, 20);
-            this.textBox7.TabIndex = 125;
+            this.Observaciones.Location = new System.Drawing.Point(192, 462);
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.Size = new System.Drawing.Size(222, 20);
+            this.Observaciones.TabIndex = 125;
             // 
             // label6
             // 
@@ -339,22 +317,15 @@ namespace SivilabApp
             this.label6.TabIndex = 126;
             this.label6.Text = "Hr.Entrevista:";
             // 
-            // textBox8
+            // Cuenta
             // 
-            this.textBox8.Location = new System.Drawing.Point(192, 510);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(91, 20);
-            this.textBox8.TabIndex = 127;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(527, 194);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
-            this.label7.TabIndex = 128;
-            this.label7.Text = "Password:";
+            this.Cuenta.AutoSize = true;
+            this.Cuenta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Cuenta.Location = new System.Drawing.Point(527, 194);
+            this.Cuenta.Name = "Cuenta";
+            this.Cuenta.Size = new System.Drawing.Size(44, 13);
+            this.Cuenta.TabIndex = 128;
+            this.Cuenta.Text = "Cuenta:";
             // 
             // label9
             // 
@@ -362,34 +333,17 @@ namespace SivilabApp
             this.label9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(527, 232);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 129;
-            this.label9.Text = "Municipio:";
+            this.label9.Text = "Ciudad:";
             // 
-            // textBox9
+            // Codigo_Postal
             // 
-            this.textBox9.Location = new System.Drawing.Point(591, 306);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(94, 20);
-            this.textBox9.TabIndex = 130;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.AutoCompleteCustomSource.AddRange(new string[] {
-            "NINGUNA",
-            "PRIMARIA",
-            "SECUNDARIA",
-            "SUPERIOR"});
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "FEMENINO",
-            "MASCULINO",
-            "AMBOS"});
-            this.comboBox4.Location = new System.Drawing.Point(591, 229);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(234, 21);
-            this.comboBox4.TabIndex = 131;
+            this.Codigo_Postal.Location = new System.Drawing.Point(591, 306);
+            this.Codigo_Postal.Name = "Codigo_Postal";
+            this.Codigo_Postal.Size = new System.Drawing.Size(94, 20);
+            this.Codigo_Postal.TabIndex = 130;
+            this.Codigo_Postal.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // label11
             // 
@@ -411,12 +365,12 @@ namespace SivilabApp
             this.label12.TabIndex = 133;
             this.label12.Text = "Email:";
             // 
-            // textBox10
+            // Correo
             // 
-            this.textBox10.Location = new System.Drawing.Point(591, 338);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(177, 20);
-            this.textBox10.TabIndex = 134;
+            this.Correo.Location = new System.Drawing.Point(591, 338);
+            this.Correo.Name = "Correo";
+            this.Correo.Size = new System.Drawing.Size(177, 20);
+            this.Correo.TabIndex = 134;
             // 
             // label13
             // 
@@ -428,30 +382,13 @@ namespace SivilabApp
             this.label13.TabIndex = 135;
             this.label13.Text = "No. Trabajadores:";
             // 
-            // textBox11
+            // Puesto
             // 
-            this.textBox11.Location = new System.Drawing.Point(591, 416);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(177, 20);
-            this.textBox11.TabIndex = 136;
-            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.AutoCompleteCustomSource.AddRange(new string[] {
-            "NINGUNA",
-            "PRIMARIA",
-            "SECUNDARIA",
-            "SUPERIOR"});
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "FEMENINO",
-            "MASCULINO",
-            "AMBOS"});
-            this.comboBox5.Location = new System.Drawing.Point(591, 378);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(177, 21);
-            this.comboBox5.TabIndex = 137;
+            this.Puesto.Location = new System.Drawing.Point(591, 416);
+            this.Puesto.Name = "Puesto";
+            this.Puesto.Size = new System.Drawing.Size(177, 20);
+            this.Puesto.TabIndex = 136;
+            this.Puesto.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // label14
             // 
@@ -463,23 +400,6 @@ namespace SivilabApp
             this.label14.TabIndex = 138;
             this.label14.Text = "Puesto:";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(527, 462);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(43, 13);
-            this.label15.TabIndex = 139;
-            this.label15.Text = "Puesto:";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(591, 459);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(177, 20);
-            this.textBox12.TabIndex = 140;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -490,12 +410,12 @@ namespace SivilabApp
             this.label16.TabIndex = 141;
             this.label16.Text = "Días de Entrevista:";
             // 
-            // textBox13
+            // Dias_duracion
             // 
-            this.textBox13.Location = new System.Drawing.Point(591, 503);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(115, 20);
-            this.textBox13.TabIndex = 142;
+            this.Dias_duracion.Location = new System.Drawing.Point(591, 503);
+            this.Dias_duracion.Name = "Dias_duracion";
+            this.Dias_duracion.Size = new System.Drawing.Size(115, 20);
+            this.Dias_duracion.TabIndex = 142;
             // 
             // button1
             // 
@@ -507,6 +427,7 @@ namespace SivilabApp
             this.button1.TabIndex = 143;
             this.button1.Text = "GUARDAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // checkBox4
             // 
@@ -519,58 +440,177 @@ namespace SivilabApp
             this.checkBox4.Text = "Nueva";
             this.checkBox4.UseVisualStyleBackColor = false;
             // 
-            // textBox14
+            // Ca
             // 
-            this.textBox14.Location = new System.Drawing.Point(655, 267);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(170, 20);
-            this.textBox14.TabIndex = 145;
+            this.Ca.Location = new System.Drawing.Point(655, 267);
+            this.Ca.Name = "Ca";
+            this.Ca.Size = new System.Drawing.Size(170, 20);
+            this.Ca.TabIndex = 145;
+            // 
+            // labe
+            // 
+            this.labe.AutoSize = true;
+            this.labe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labe.Location = new System.Drawing.Point(539, 452);
+            this.labe.Name = "labe";
+            this.labe.Size = new System.Drawing.Size(45, 13);
+            this.labe.TabIndex = 148;
+            this.labe.Text = "No_Ext:";
+            // 
+            // No_ext
+            // 
+            this.No_ext.Location = new System.Drawing.Point(591, 452);
+            this.No_ext.Name = "No_ext";
+            this.No_ext.Size = new System.Drawing.Size(50, 20);
+            this.No_ext.TabIndex = 149;
+            // 
+            // Estado
+            // 
+            this.Estado.AutoCompleteCustomSource.AddRange(new string[] {
+            "NINGUNA",
+            "PRIMARIA",
+            "SECUNDARIA",
+            "SUPERIOR"});
+            this.Estado.DisplayMember = "hh";
+            this.Estado.FormattingEnabled = true;
+            this.Estado.Items.AddRange(new object[] {
+            "Aguascalientes",
+            "Baja California",
+            "Baja California Sur",
+            "Campeche ",
+            "Chiapas",
+            "Chihuahua",
+            "Ciudad de México",
+            "Coahuila",
+            "Colima",
+            "Durango",
+            "Estado de México",
+            "Guanajuato",
+            "Guerrero",
+            "Hidalgo",
+            "Jalisco",
+            "Michoacán",
+            "Morelos",
+            "Nayarit",
+            "Nuevo León",
+            "Oaxaca",
+            "Puebla",
+            "Querétaro",
+            "Quintana Roo ",
+            "San Luis Potosí",
+            "Sinaloa",
+            "Sonora ",
+            "Tabasco ",
+            "Tamaulipas ",
+            "Tlaxcala ",
+            "Veracruz ",
+            "Yucatán ",
+            "Zacatecas"});
+            this.Estado.Location = new System.Drawing.Point(192, 229);
+            this.Estado.Name = "Estado";
+            this.Estado.Size = new System.Drawing.Size(141, 21);
+            this.Estado.TabIndex = 150;
+            // 
+            // Hora
+            // 
+            this.Hora.Location = new System.Drawing.Point(192, 510);
+            this.Hora.Name = "Hora";
+            this.Hora.Size = new System.Drawing.Size(200, 20);
+            this.Hora.TabIndex = 151;
+            // 
+            // Ciudad
+            // 
+            this.Ciudad.AutoCompleteCustomSource.AddRange(new string[] {
+            "NINGUNA",
+            "PRIMARIA",
+            "SECUNDARIA",
+            "SUPERIOR"});
+            this.Ciudad.FormattingEnabled = true;
+            this.Ciudad.Items.AddRange(new object[] {
+            "Tuxtla Gutierrez",
+            "San Cristóbal de las Casas",
+            "Tapachula",
+            "Palenque",
+            "Comitan",
+            "Chiapa de Corzo",
+            "Yajalon"});
+            this.Ciudad.Location = new System.Drawing.Point(591, 232);
+            this.Ciudad.Name = "Ciudad";
+            this.Ciudad.Size = new System.Drawing.Size(177, 21);
+            this.Ciudad.TabIndex = 152;
+            this.Ciudad.SelectedIndexChanged += new System.EventHandler(this.Ciudad_SelectedIndexChanged);
+            // 
+            // No_trabajadores
+            // 
+            this.No_trabajadores.Location = new System.Drawing.Point(591, 371);
+            this.No_trabajadores.Name = "No_trabajadores";
+            this.No_trabajadores.Size = new System.Drawing.Size(50, 20);
+            this.No_trabajadores.TabIndex = 153;
+            // 
+            // Tipo_servicio
+            // 
+            this.Tipo_servicio.AutoCompleteCustomSource.AddRange(new string[] {
+            "NINGUNA",
+            "PRIMARIA",
+            "SECUNDARIA",
+            "SUPERIOR"});
+            this.Tipo_servicio.FormattingEnabled = true;
+            this.Tipo_servicio.Items.AddRange(new object[] {
+            "VENTAS",
+            "MANTENIMIENTO",
+            "TICS",
+            "GERENCIA",
+            "EJECUTIVO"});
+            this.Tipo_servicio.Location = new System.Drawing.Point(192, 427);
+            this.Tipo_servicio.Name = "Tipo_servicio";
+            this.Tipo_servicio.Size = new System.Drawing.Size(166, 21);
+            this.Tipo_servicio.TabIndex = 154;
             // 
             // Registro_de_Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 622);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.Tipo_servicio);
+            this.Controls.Add(this.No_trabajadores);
+            this.Controls.Add(this.Ciudad);
+            this.Controls.Add(this.Hora);
+            this.Controls.Add(this.Estado);
+            this.Controls.Add(this.No_ext);
+            this.Controls.Add(this.labe);
+            this.Controls.Add(this.Ca);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.Dias_duracion);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.Puesto);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.Correo);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.Codigo_Postal);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.Cuenta);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.Observaciones);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Actividad_economica);
+            this.Controls.Add(this.Contrasena_usuario);
+            this.Controls.Add(this.Telefono);
+            this.Controls.Add(this.calle);
+            this.Controls.Add(this.Colonia);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.RFC_dependencia);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CvcDependencia);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txbSalarioMensual);
+            this.Controls.Add(this.Nombre);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
@@ -578,6 +618,7 @@ namespace SivilabApp
             this.Controls.Add(this.pictureBox1);
             this.Name = "Registro_de_Empresa";
             this.Text = "Registro_de_Empresa";
+            this.Load += new System.EventHandler(this.Registro_de_Empresa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -595,42 +636,42 @@ namespace SivilabApp
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txbSalarioMensual;
+        private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CvcDependencia;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox RFC_dependencia;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox Colonia;
+        private System.Windows.Forms.TextBox calle;
+        private System.Windows.Forms.TextBox Telefono;
+        private System.Windows.Forms.TextBox Contrasena_usuario;
+        private System.Windows.Forms.ComboBox Actividad_economica;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox Observaciones;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Cuenta;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox Codigo_Postal;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox Correo;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox Puesto;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox Dias_duracion;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox Ca;
+        private System.Windows.Forms.Label labe;
+        private System.Windows.Forms.TextBox No_ext;
+        private System.Windows.Forms.ComboBox Estado;
+        private System.Windows.Forms.DateTimePicker Hora;
+        private System.Windows.Forms.ComboBox Ciudad;
+        private System.Windows.Forms.TextBox No_trabajadores;
+        private System.Windows.Forms.ComboBox Tipo_servicio;
     }
 }

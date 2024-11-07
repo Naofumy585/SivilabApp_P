@@ -139,7 +139,7 @@
             this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.Black;
-            this.btnIngresar.Location = new System.Drawing.Point(218, 349);
+            this.btnIngresar.Location = new System.Drawing.Point(218, 348);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(107, 38);
             this.btnIngresar.TabIndex = 22;

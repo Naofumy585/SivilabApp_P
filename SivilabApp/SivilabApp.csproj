@@ -59,6 +59,7 @@
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.9.1.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
@@ -106,11 +107,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buscar Dependencia.cs">
+    <Compile Include="Buscar_Dependencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Buscar Dependencia.Designer.cs">
-      <DependentUpon>Buscar Dependencia.cs</DependentUpon>
+    <Compile Include="Buscar_Dependencia.Designer.cs">
+      <DependentUpon>Buscar_Dependencia.cs</DependentUpon>
     </Compile>
     <Compile Include="BuscarDependencia.cs">
       <SubType>Form</SubType>
@@ -174,12 +175,6 @@
     <Compile Include="Iniciarsesion.Designer.cs">
       <DependentUpon>Iniciarsesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="panelContenido.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="panelContenido.Designer.cs">
-      <DependentUpon>panelContenido.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarVacante.cs">
@@ -200,11 +195,11 @@
     <Compile Include="RegistrarSolicitante.Designer.cs">
       <DependentUpon>RegistrarSolicitante.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registro de Empresa.cs">
+    <Compile Include="Registro_de_Empresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro de Empresa.Designer.cs">
-      <DependentUpon>Registro de Empresa.cs</DependentUpon>
+    <Compile Include="Registro_de_Empresa.Designer.cs">
+      <DependentUpon>Registro_de_Empresa.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroEvento.cs">
       <SubType>Form</SubType>
@@ -224,6 +219,7 @@
     <Compile Include="Controles_Usuario\Citas_cu.Designer.cs">
       <DependentUpon>Citas_cu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios.cs" />
     <Compile Include="VacantesconEnvios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,8 +232,8 @@
     <Compile Include="VacantessinEnvios.Designer.cs">
       <DependentUpon>VacantessinEnvios.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Buscar Dependencia.resx">
-      <DependentUpon>Buscar Dependencia.cs</DependentUpon>
+    <EmbeddedResource Include="Buscar_Dependencia.resx">
+      <DependentUpon>Buscar_Dependencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarDependencia.resx">
       <DependentUpon>BuscarDependencia.cs</DependentUpon>
@@ -272,9 +268,6 @@
     <EmbeddedResource Include="Iniciarsesion.resx">
       <DependentUpon>Iniciarsesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="panelContenido.resx">
-      <DependentUpon>panelContenido.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -293,8 +286,8 @@
     <EmbeddedResource Include="RegistrarSolicitante.resx">
       <DependentUpon>RegistrarSolicitante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro de Empresa.resx">
-      <DependentUpon>Registro de Empresa.cs</DependentUpon>
+    <EmbeddedResource Include="Registro_de_Empresa.resx">
+      <DependentUpon>Registro_de_Empresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroEvento.resx">
       <DependentUpon>RegistroEvento.cs</DependentUpon>

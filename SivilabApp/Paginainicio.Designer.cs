@@ -196,6 +196,7 @@
             this.btnEventos.TabIndex = 13;
             this.btnEventos.Text = "Eventos";
             this.btnEventos.UseVisualStyleBackColor = false;
+            this.btnEventos.Click += new System.EventHandler(this.btnEventos_Click);
             // 
             // pictureBox8
             // 
@@ -226,6 +227,7 @@
             this.btnDependencia.TabIndex = 16;
             this.btnDependencia.Text = "Dependencias";
             this.btnDependencia.UseVisualStyleBackColor = false;
+            this.btnDependencia.Click += new System.EventHandler(this.btnDependencia_Click);
             // 
             // btnSalir
             // 

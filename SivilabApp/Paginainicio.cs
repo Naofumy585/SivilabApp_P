@@ -102,5 +102,19 @@ namespace SivilabApp
         {
 
         }
+
+        private void btnDependencia_Click(object sender, EventArgs e)
+        {
+            //Crear una instancia del formulario FVacantes
+            Buscar_Dependencia formDependencia = new Buscar_Dependencia();
+
+            //Mostrar el Formulario
+            formDependencia.Show();
+        }
+
+        private void btnEventos_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }
