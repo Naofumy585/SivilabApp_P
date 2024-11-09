@@ -33,24 +33,26 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Nombre_completo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ApellidoPaterno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ApellidoMaterno = new System.Windows.Forms.TextBox();
+            this.Rfc = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Curp_solicitante = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Correo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.Direccion_completa = new System.Windows.Forms.TextBox();
+            this.Fecha = new System.Windows.Forms.DateTimePicker();
+            this.Hora = new System.Windows.Forms.TextBox();
             this.btnGuardarCita = new System.Windows.Forms.Button();
+            this.Contrasena_usuario = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -93,17 +95,17 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(55, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 15;
             this.label2.Text = "Nombre:";
             // 
-            // textBox1
+            // Nombre_completo
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 20);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Nombre_completo.Location = new System.Drawing.Point(166, 100);
+            this.Nombre_completo.Name = "Nombre_completo";
+            this.Nombre_completo.Size = new System.Drawing.Size(244, 20);
+            this.Nombre_completo.TabIndex = 16;
+            this.Nombre_completo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -113,16 +115,16 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(55, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 16);
+            this.label3.Size = new System.Drawing.Size(104, 16);
             this.label3.TabIndex = 17;
             this.label3.Text = "ApellidoPaterno:";
             // 
-            // textBox2
+            // ApellidoPaterno
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 20);
-            this.textBox2.TabIndex = 18;
+            this.ApellidoPaterno.Location = new System.Drawing.Point(166, 142);
+            this.ApellidoPaterno.Name = "ApellidoPaterno";
+            this.ApellidoPaterno.Size = new System.Drawing.Size(242, 20);
+            this.ApellidoPaterno.TabIndex = 18;
             // 
             // label4
             // 
@@ -132,7 +134,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(55, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 16);
+            this.label4.Size = new System.Drawing.Size(109, 16);
             this.label4.TabIndex = 19;
             this.label4.Text = "ApellidoMaterno:";
             // 
@@ -144,23 +146,24 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(55, 210);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 16);
+            this.label5.Size = new System.Drawing.Size(33, 16);
             this.label5.TabIndex = 20;
             this.label5.Text = "RFC:";
             // 
-            // textBox3
+            // ApellidoMaterno
             // 
-            this.textBox3.Location = new System.Drawing.Point(171, 178);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(237, 20);
-            this.textBox3.TabIndex = 21;
+            this.ApellidoMaterno.Location = new System.Drawing.Point(171, 178);
+            this.ApellidoMaterno.Name = "ApellidoMaterno";
+            this.ApellidoMaterno.Size = new System.Drawing.Size(237, 20);
+            this.ApellidoMaterno.TabIndex = 21;
             // 
-            // textBox4
+            // Rfc
             // 
-            this.textBox4.Location = new System.Drawing.Point(169, 210);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(237, 20);
-            this.textBox4.TabIndex = 22;
+            this.Rfc.Location = new System.Drawing.Point(169, 210);
+            this.Rfc.Name = "Rfc";
+            this.Rfc.Size = new System.Drawing.Size(237, 20);
+            this.Rfc.TabIndex = 22;
+            this.Rfc.TextChanged += new System.EventHandler(this.Rfc_TextChanged);
             // 
             // label6
             // 
@@ -170,16 +173,16 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(55, 246);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 16);
+            this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 23;
             this.label6.Text = "CURP:";
             // 
-            // textBox5
+            // Curp_solicitante
             // 
-            this.textBox5.Location = new System.Drawing.Point(171, 244);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(237, 20);
-            this.textBox5.TabIndex = 24;
+            this.Curp_solicitante.Location = new System.Drawing.Point(171, 244);
+            this.Curp_solicitante.Name = "Curp_solicitante";
+            this.Curp_solicitante.Size = new System.Drawing.Size(237, 20);
+            this.Curp_solicitante.TabIndex = 24;
             // 
             // label7
             // 
@@ -189,16 +192,16 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(55, 289);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 16);
+            this.label7.Size = new System.Drawing.Size(120, 16);
             this.label7.TabIndex = 25;
             this.label7.Text = "Correo Electronico:";
             // 
-            // textBox6
+            // Correo
             // 
-            this.textBox6.Location = new System.Drawing.Point(173, 285);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(237, 20);
-            this.textBox6.TabIndex = 26;
+            this.Correo.Location = new System.Drawing.Point(173, 285);
+            this.Correo.Name = "Correo";
+            this.Correo.Size = new System.Drawing.Size(237, 20);
+            this.Correo.TabIndex = 26;
             // 
             // label8
             // 
@@ -208,7 +211,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(55, 330);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 16);
+            this.label8.Size = new System.Drawing.Size(97, 16);
             this.label8.TabIndex = 27;
             this.label8.Text = "Hora de la cita:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -221,7 +224,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(55, 362);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 16);
+            this.label9.Size = new System.Drawing.Size(101, 16);
             this.label9.TabIndex = 28;
             this.label9.Text = "Fecha de la cita:";
             // 
@@ -233,30 +236,30 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Location = new System.Drawing.Point(55, 401);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 16);
+            this.label10.Size = new System.Drawing.Size(127, 16);
             this.label10.TabIndex = 29;
             this.label10.Text = "Dirreccion de la cita:";
             // 
-            // textBox7
+            // Direccion_completa
             // 
-            this.textBox7.Location = new System.Drawing.Point(187, 397);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(233, 20);
-            this.textBox7.TabIndex = 30;
+            this.Direccion_completa.Location = new System.Drawing.Point(187, 397);
+            this.Direccion_completa.Name = "Direccion_completa";
+            this.Direccion_completa.Size = new System.Drawing.Size(233, 20);
+            this.Direccion_completa.TabIndex = 30;
             // 
-            // dateTimePicker1
+            // Fecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(169, 358);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(241, 20);
-            this.dateTimePicker1.TabIndex = 31;
+            this.Fecha.Location = new System.Drawing.Point(169, 358);
+            this.Fecha.Name = "Fecha";
+            this.Fecha.Size = new System.Drawing.Size(241, 20);
+            this.Fecha.TabIndex = 31;
             // 
-            // textBox8
+            // Hora
             // 
-            this.textBox8.Location = new System.Drawing.Point(169, 328);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(237, 20);
-            this.textBox8.TabIndex = 32;
+            this.Hora.Location = new System.Drawing.Point(169, 328);
+            this.Hora.Name = "Hora";
+            this.Hora.Size = new System.Drawing.Size(237, 20);
+            this.Hora.TabIndex = 32;
             // 
             // btnGuardarCita
             // 
@@ -268,6 +271,26 @@
             this.btnGuardarCita.TabIndex = 33;
             this.btnGuardarCita.Text = "GUARDAR";
             this.btnGuardarCita.UseVisualStyleBackColor = false;
+            this.btnGuardarCita.Click += new System.EventHandler(this.btnGuardarCita_Click);
+            // 
+            // Contrasena_usuario
+            // 
+            this.Contrasena_usuario.Location = new System.Drawing.Point(414, 140);
+            this.Contrasena_usuario.Name = "Contrasena_usuario";
+            this.Contrasena_usuario.Size = new System.Drawing.Size(105, 20);
+            this.Contrasena_usuario.TabIndex = 34;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(425, 121);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 16);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Contraseña";
             // 
             // RegistrarCita
             // 
@@ -275,24 +298,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(584, 502);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Contrasena_usuario);
             this.Controls.Add(this.btnGuardarCita);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.Hora);
+            this.Controls.Add(this.Fecha);
+            this.Controls.Add(this.Direccion_completa);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.Correo);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.Curp_solicitante);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.Rfc);
+            this.Controls.Add(this.ApellidoMaterno);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ApellidoPaterno);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Nombre_completo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -312,23 +337,25 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Nombre_completo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ApellidoPaterno;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ApellidoMaterno;
+        private System.Windows.Forms.TextBox Rfc;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Curp_solicitante;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox Correo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox Direccion_completa;
+        private System.Windows.Forms.DateTimePicker Fecha;
+        private System.Windows.Forms.TextBox Hora;
         private System.Windows.Forms.Button btnGuardarCita;
+        private System.Windows.Forms.TextBox Contrasena_usuario;
+        private System.Windows.Forms.Label label11;
     }
 }

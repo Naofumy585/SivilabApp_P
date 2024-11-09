@@ -190,5 +190,10 @@ namespace SivilabApp
         {
 
         }
+
+        private void No_ext_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

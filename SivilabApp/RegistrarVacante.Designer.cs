@@ -35,13 +35,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Vigencia = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.CvcVacante = new System.Windows.Forms.TextBox();
+            this.Contrasena_usuario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Puesto_solicta = new System.Windows.Forms.TextBox();
+            this.Puesto_ofrecido = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Tipo = new System.Windows.Forms.ComboBox();
+            this.Tipo_de_vacante = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Otras_prestaciones = new System.Windows.Forms.ComboBox();
+            this.Tipo_contrato = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Modalidad = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,12 +60,18 @@
             this.Sexo = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.Rango_edad = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.Disponible_viaje = new System.Windows.Forms.CheckBox();
+            this.Disponible_afuera = new System.Windows.Forms.CheckBox();
             this.Licencia_de_manejo = new System.Windows.Forms.CheckBox();
             this.Cartilla = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Cvcdependencia = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Otras_prestaciones = new System.Windows.Forms.TextBox();
+            this.Habilidades = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -131,12 +137,12 @@
             this.label4.Text = "Folio SILAP:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // CvcVacante
+            // Contrasena_usuario
             // 
-            this.CvcVacante.Location = new System.Drawing.Point(656, 135);
-            this.CvcVacante.Name = "CvcVacante";
-            this.CvcVacante.Size = new System.Drawing.Size(96, 20);
-            this.CvcVacante.TabIndex = 22;
+            this.Contrasena_usuario.Location = new System.Drawing.Point(656, 135);
+            this.Contrasena_usuario.Name = "Contrasena_usuario";
+            this.Contrasena_usuario.Size = new System.Drawing.Size(96, 20);
+            this.Contrasena_usuario.TabIndex = 22;
             // 
             // label5
             // 
@@ -148,12 +154,12 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Puesto Ofrecido:";
             // 
-            // Puesto_solicta
+            // Puesto_ofrecido
             // 
-            this.Puesto_solicta.Location = new System.Drawing.Point(148, 177);
-            this.Puesto_solicta.Name = "Puesto_solicta";
-            this.Puesto_solicta.Size = new System.Drawing.Size(249, 20);
-            this.Puesto_solicta.TabIndex = 24;
+            this.Puesto_ofrecido.Location = new System.Drawing.Point(148, 177);
+            this.Puesto_ofrecido.Name = "Puesto_ofrecido";
+            this.Puesto_ofrecido.Size = new System.Drawing.Size(249, 20);
+            this.Puesto_ofrecido.TabIndex = 24;
             // 
             // label6
             // 
@@ -166,16 +172,16 @@
             this.label6.Text = "Tipo Vacante:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // Tipo
+            // Tipo_de_vacante
             // 
-            this.Tipo.FormattingEnabled = true;
-            this.Tipo.Items.AddRange(new object[] {
+            this.Tipo_de_vacante.FormattingEnabled = true;
+            this.Tipo_de_vacante.Items.AddRange(new object[] {
             "Bolsa de trabajo",
             "Trabajo Fijo"});
-            this.Tipo.Location = new System.Drawing.Point(148, 222);
-            this.Tipo.Name = "Tipo";
-            this.Tipo.Size = new System.Drawing.Size(249, 21);
-            this.Tipo.TabIndex = 26;
+            this.Tipo_de_vacante.Location = new System.Drawing.Point(148, 222);
+            this.Tipo_de_vacante.Name = "Tipo_de_vacante";
+            this.Tipo_de_vacante.Size = new System.Drawing.Size(249, 21);
+            this.Tipo_de_vacante.TabIndex = 26;
             // 
             // label7
             // 
@@ -187,16 +193,16 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "Tipo Contrato:";
             // 
-            // Otras_prestaciones
+            // Tipo_contrato
             // 
-            this.Otras_prestaciones.FormattingEnabled = true;
-            this.Otras_prestaciones.Items.AddRange(new object[] {
+            this.Tipo_contrato.FormattingEnabled = true;
+            this.Tipo_contrato.Items.AddRange(new object[] {
             "Permanente ",
             "Tiempo Completo"});
-            this.Otras_prestaciones.Location = new System.Drawing.Point(656, 217);
-            this.Otras_prestaciones.Name = "Otras_prestaciones";
-            this.Otras_prestaciones.Size = new System.Drawing.Size(117, 21);
-            this.Otras_prestaciones.TabIndex = 28;
+            this.Tipo_contrato.Location = new System.Drawing.Point(656, 217);
+            this.Tipo_contrato.Name = "Tipo_contrato";
+            this.Tipo_contrato.Size = new System.Drawing.Size(117, 21);
+            this.Tipo_contrato.TabIndex = 28;
             // 
             // label8
             // 
@@ -313,9 +319,10 @@
             "SUPERIOR"});
             this.Escolaridad.FormattingEnabled = true;
             this.Escolaridad.Items.AddRange(new object[] {
-            "Mixto",
-            "Medio Tiempo",
-            "Tiempo Completo"});
+            "Universitario",
+            "Bachiller",
+            "Secundaria",
+            "Licenciatura"});
             this.Escolaridad.Location = new System.Drawing.Point(122, 411);
             this.Escolaridad.Name = "Escolaridad";
             this.Escolaridad.Size = new System.Drawing.Size(122, 21);
@@ -410,27 +417,27 @@
             this.Rango_edad.Size = new System.Drawing.Size(122, 21);
             this.Rango_edad.TabIndex = 55;
             // 
-            // checkBox1
+            // Disponible_viaje
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.checkBox1.Location = new System.Drawing.Point(69, 597);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(145, 17);
-            this.checkBox1.TabIndex = 56;
-            this.checkBox1.Text = "Disponibilidad Para Viajar";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.Disponible_viaje.AutoSize = true;
+            this.Disponible_viaje.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.Disponible_viaje.Location = new System.Drawing.Point(69, 597);
+            this.Disponible_viaje.Name = "Disponible_viaje";
+            this.Disponible_viaje.Size = new System.Drawing.Size(145, 17);
+            this.Disponible_viaje.TabIndex = 56;
+            this.Disponible_viaje.Text = "Disponibilidad Para Viajar";
+            this.Disponible_viaje.UseVisualStyleBackColor = false;
             // 
-            // checkBox2
+            // Disponible_afuera
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.checkBox2.Location = new System.Drawing.Point(271, 597);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(186, 17);
-            this.checkBox2.TabIndex = 57;
-            this.checkBox2.Text = "Disponibilidad Para Radicar Fuera";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.Disponible_afuera.AutoSize = true;
+            this.Disponible_afuera.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.Disponible_afuera.Location = new System.Drawing.Point(271, 597);
+            this.Disponible_afuera.Name = "Disponible_afuera";
+            this.Disponible_afuera.Size = new System.Drawing.Size(186, 17);
+            this.Disponible_afuera.TabIndex = 57;
+            this.Disponible_afuera.Text = "Disponibilidad Para Radicar Fuera";
+            this.Disponible_afuera.UseVisualStyleBackColor = false;
             // 
             // Licencia_de_manejo
             // 
@@ -475,17 +482,80 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(568, 180);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(93, 13);
+            this.label13.TabIndex = 62;
+            this.label13.Text = "folio Dependencia";
+            // 
+            // Cvcdependencia
+            // 
+            this.Cvcdependencia.FormattingEnabled = true;
+            this.Cvcdependencia.Items.AddRange(new object[] {
+            "Permanente ",
+            "Tiempo Completo"});
+            this.Cvcdependencia.Location = new System.Drawing.Point(656, 176);
+            this.Cvcdependencia.Name = "Cvcdependencia";
+            this.Cvcdependencia.Size = new System.Drawing.Size(117, 21);
+            this.Cvcdependencia.TabIndex = 63;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(568, 265);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 13);
+            this.label14.TabIndex = 65;
+            this.label14.Text = "Prestaciones";
+            // 
+            // Otras_prestaciones
+            // 
+            this.Otras_prestaciones.Location = new System.Drawing.Point(656, 258);
+            this.Otras_prestaciones.Multiline = true;
+            this.Otras_prestaciones.Name = "Otras_prestaciones";
+            this.Otras_prestaciones.Size = new System.Drawing.Size(117, 81);
+            this.Otras_prestaciones.TabIndex = 66;
+            // 
+            // Habilidades
+            // 
+            this.Habilidades.Location = new System.Drawing.Point(601, 491);
+            this.Habilidades.Multiline = true;
+            this.Habilidades.Name = "Habilidades";
+            this.Habilidades.Size = new System.Drawing.Size(172, 81);
+            this.Habilidades.TabIndex = 67;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(510, 518);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(65, 13);
+            this.label15.TabIndex = 68;
+            this.label15.Text = "Habilidades:";
+            // 
             // RegistrarVacante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(902, 688);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.Habilidades);
+            this.Controls.Add(this.Otras_prestaciones);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.Cvcdependencia);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Cartilla);
             this.Controls.Add(this.Licencia_de_manejo);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.Disponible_afuera);
+            this.Controls.Add(this.Disponible_viaje);
             this.Controls.Add(this.Rango_edad);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.Sexo);
@@ -504,13 +574,13 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Modalidad);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.Otras_prestaciones);
+            this.Controls.Add(this.Tipo_contrato);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.Tipo);
+            this.Controls.Add(this.Tipo_de_vacante);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.Puesto_solicta);
+            this.Controls.Add(this.Puesto_ofrecido);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.CvcVacante);
+            this.Controls.Add(this.Contrasena_usuario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Vigencia);
             this.Controls.Add(this.label3);
@@ -535,13 +605,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker Vigencia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox CvcVacante;
+        private System.Windows.Forms.TextBox Contrasena_usuario;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox Puesto_solicta;
+        private System.Windows.Forms.TextBox Puesto_ofrecido;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox Tipo;
+        private System.Windows.Forms.ComboBox Tipo_de_vacante;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox Otras_prestaciones;
+        private System.Windows.Forms.ComboBox Tipo_contrato;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox Modalidad;
         private System.Windows.Forms.Label label9;
@@ -560,11 +630,17 @@
         private System.Windows.Forms.ComboBox Sexo;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox Rango_edad;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox Disponible_viaje;
+        private System.Windows.Forms.CheckBox Disponible_afuera;
         private System.Windows.Forms.CheckBox Licencia_de_manejo;
         private System.Windows.Forms.CheckBox Cartilla;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox Cvcdependencia;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox Otras_prestaciones;
+        private System.Windows.Forms.TextBox Habilidades;
+        private System.Windows.Forms.Label label15;
     }
 }

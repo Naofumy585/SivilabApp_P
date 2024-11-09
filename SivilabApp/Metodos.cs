@@ -60,50 +60,112 @@ namespace SivilabApp
                 }
             } // La conexión se cerrará automáticamente aquí
         }
-        public bool AgregarSolicitud(string folio, string apellidoPaterno, string apellidoMaterno, string nombreSolicitante, string rfc, string curp, string correo, DateTime fechaNacimiento, string escolaridad, string genero, decimal telefono, string direccion, string cvcCedula, string curpUsuario)
+        public bool AgregarSolicitud(
+    string folio, string apellidoPaterno, string apellidoMaterno, string nombreSolicitante, string rfc, string curp, string cvcVacante,
+    string correo, DateTime fechaNacimiento, string escolaridad, string genero, string telefono, string direccion,
+    string cvcCedula, string curpUsuario, string ciudad, string estado, string calle, string colonia,
+    int codigoPostal, string nacionalidad, int noExterior, string nombreUsuario, MySqlConnection connection)
         {
             bool solicitudAgregada = false;
 
-            // Tu consulta ya usa el folio correctamente
-            string query = "INSERT INTO Solicitud (Folio, ApellidoPaterno, ApellidoMaterno, Nombre_solicitante, Rfc, Curp, Correo, Fecha_Nacimiento, Escolaridad, Genero, Telefono, Direccion, Cvc_cedula, Curp_usuario) " +
-                           "VALUES (@Folio, @ApellidoPaterno, @ApellidoMaterno, @NombreSolicitante, @Rfc, @Curp, @Correo, @FechaNacimiento, @Escolaridad, @Genero, @Telefono, @Direccion, @CvcCedula, @CurpUsuario)";
-
-            // Crear instancia de la clase de conexión
-            ConexionSql conexionSql = new ConexionSql();
-
-            using (MySqlConnection conn = conexionSql.EstablecerConexion())
+            // Verificar si la conexión está abierta
+            if (connection == null || connection.State != ConnectionState.Open)
             {
-                if (conn == null) // Verificar que la conexión no sea nula
-                {
-                    return solicitudAgregada; // Si no se pudo abrir la conexión, retornar false
-                }
+                MessageBox.Show("No se pudo abrir la conexión con la base de datos.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return solicitudAgregada;
+            }
 
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            // Iniciar la transacción
+            using (var transaction = connection.BeginTransaction())
+            {
+                try
                 {
-                    // Agregar los parámetros a la consulta
-                    cmd.Parameters.AddWithValue("@Folio", folio);
-                    cmd.Parameters.AddWithValue("@ApellidoPaterno", apellidoPaterno);
-                    cmd.Parameters.AddWithValue("@ApellidoMaterno", apellidoMaterno);
-                    cmd.Parameters.AddWithValue("@NombreSolicitante", nombreSolicitante);
-                    cmd.Parameters.AddWithValue("@Rfc", rfc);
-                    cmd.Parameters.AddWithValue("@Curp", curp);
-                    cmd.Parameters.AddWithValue("@Correo", correo);
-                    cmd.Parameters.AddWithValue("@FechaNacimiento", fechaNacimiento);
-                    cmd.Parameters.AddWithValue("@Escolaridad", escolaridad);
-                    cmd.Parameters.AddWithValue("@Genero", genero);
-                    cmd.Parameters.AddWithValue("@Telefono", telefono);
-                    cmd.Parameters.AddWithValue("@Direccion", direccion);
-                    cmd.Parameters.AddWithValue("@CvcCedula", cvcCedula);
-                    cmd.Parameters.AddWithValue("@CurpUsuario", curpUsuario);
+                    // Insertar en la tabla Solicitud
+                    string querySolicitud = @"
+                INSERT INTO Solicitud (
+                    Folio, ApellidoPaterno, ApellidoMaterno, Nombre_solicitante, Rfc, Correo, Estado_migratorio, 
+                    Fecha_Nacimiento, Escolaridad, Genero, Telefono, Direccion, Cvc_cedula, Curp_Solicitante, Curp, Curp_usuario
+                )
+                VALUES (
+                    @Folio, @ApellidoPaterno, @ApellidoMaterno, @NombreSolicitante, @Rfc, @Correo, @Estado_migratorio,  
+                    @Fecha_Nacimiento, @Escolaridad, @Genero, @Telefono, @Direccion, @CvcCedula, @Curp_Solicitante, @Curp, @CurpUsuario
+                )";
 
-                    // Ejecutar el comando y verificar si se insertó correctamente
-                    solicitudAgregada = cmd.ExecuteNonQuery() > 0;
+                    using (MySqlCommand cmdSolicitud = new MySqlCommand(querySolicitud, connection, transaction))
+                    {
+                        cmdSolicitud.Parameters.AddWithValue("@Folio", folio);
+                        cmdSolicitud.Parameters.AddWithValue("@ApellidoPaterno", apellidoPaterno);
+                        cmdSolicitud.Parameters.AddWithValue("@ApellidoMaterno", apellidoMaterno);
+                        cmdSolicitud.Parameters.AddWithValue("@NombreSolicitante", nombreSolicitante);
+                        cmdSolicitud.Parameters.AddWithValue("@Rfc", rfc);
+                        cmdSolicitud.Parameters.AddWithValue("@Curp_Solicitante", curp);
+                        cmdSolicitud.Parameters.AddWithValue("@Correo", correo);
+                        cmdSolicitud.Parameters.AddWithValue("@Estado_migratorio", nacionalidad);
+                        cmdSolicitud.Parameters.AddWithValue("@Fecha_Nacimiento", fechaNacimiento);
+                        cmdSolicitud.Parameters.AddWithValue("@Escolaridad", escolaridad);
+                        cmdSolicitud.Parameters.AddWithValue("@Genero", genero);
+                        cmdSolicitud.Parameters.AddWithValue("@Telefono", telefono);
+                        cmdSolicitud.Parameters.AddWithValue("@Direccion", direccion);
+                        cmdSolicitud.Parameters.AddWithValue("@CvcCedula", cvcCedula);
+                        cmdSolicitud.Parameters.AddWithValue("@Curp", cvcVacante);
+                        cmdSolicitud.Parameters.AddWithValue("@CurpUsuario", curpUsuario);
+
+                        try
+                        {
+                            cmdSolicitud.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al insertar en la tabla Solicitud: {ex.Message}", "Error en Solicitud", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            throw; // Relanzar para manejar en el bloque catch principal
+                        }
+                    }
+
+                    // Insertar en la tabla Direccion_Solicitante
+                    string queryDireccion = @"
+                    INSERT INTO direccion_solicitante (
+                        Folio, Codigo_postal, Calle_1, Colonia, Ciudad, Estado, No_exterior
+                    )
+                    VALUES (
+                        @Folio, @Codigo_postal, @Calle_1, @Colonia, @Ciudad, @Estado, @No_exterior
+                    )";
+
+                    using (MySqlCommand cmdDireccion = new MySqlCommand(queryDireccion, connection, transaction))
+                    {
+                        cmdDireccion.Parameters.AddWithValue("@Folio", folio);
+                        cmdDireccion.Parameters.AddWithValue("@Codigo_postal", codigoPostal);
+                        cmdDireccion.Parameters.AddWithValue("@Calle_1", calle);
+                        cmdDireccion.Parameters.AddWithValue("@Colonia", colonia);
+                        cmdDireccion.Parameters.AddWithValue("@Ciudad", ciudad);
+                        cmdDireccion.Parameters.AddWithValue("@Estado", estado);
+                        cmdDireccion.Parameters.AddWithValue("@No_exterior", noExterior);
+
+                        try
+                        {
+                            cmdDireccion.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al insertar en la tabla Direccion_Solicitante: {ex.Message}", "Error en Direccion_Solicitante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            throw; // Relanzar para manejar en el bloque catch principal
+                        }
+                    }
+
+                    // Confirmar la transacción si ambas inserciones fueron exitosas
+                    transaction.Commit();
+                    solicitudAgregada = true;
                 }
-            } // La conexión se cerrará automáticamente aquí
+                catch (Exception ex)
+                {
+                    // En caso de error, revertir la transacción
+                    transaction.Rollback();
+                    MessageBox.Show($"Se produjo un error inesperado durante la transacción: {ex.Message}", "Error de transacción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    solicitudAgregada = false;
+                }
+            }
 
             return solicitudAgregada;
         }
-
         public bool ActualizarSolicitud(string folio, string apellidoPaterno, string apellidoMaterno, string nombreSolicitante, string rfc, string curp, string correo, DateTime fechaNacimiento, string escolaridad, string genero, decimal telefono, string direccion, string cvcCedula, string curpUsuario)
         {
             ConexionSql conexionSql = new ConexionSql();
@@ -166,7 +228,7 @@ namespace SivilabApp
 
                         // Validar usuario y obtener CURP
                         string curpUsuario = null;
-                        if (!ValidarUsuario( contrasena, out curpUsuario))
+                        if (!ValidarUsuario(contrasena, out curpUsuario))
                         {
                             Console.WriteLine("El usuario o la contraseña no son válidos.");
                             return false; // Si la validación falla
@@ -283,97 +345,86 @@ namespace SivilabApp
             }
         }
         public bool AgregarVacante(
-           string cvcVacante,
-            string curpUsuario,
-            DateTime vigencia,
-            string prestaciones,
-            string estatus,
-            string tipoVacante,
-            string tipoEmp,
-            string puestoSolicita,
-            string cvcDependencia,
-            string salarioM,
-            string no_pla,
-            string horas,
-            string turno,
-            string tipoEmpRequerido,
-            string escolaridad,
-            string sexo,
-            bool licencia,
-            bool cartilla,
-            string rangoEdad)
+      string cvcVacante, DateTime vigencia, string contrasena, string prestaciones, string estatus, string tipoVacante,
+      string tipoEmp, string tipocontrato, string puesto_ofrecido, string cvcDependencia, decimal salarioM, int no_pla,
+      int horas, string escolaridad, string sexo, bool licencia, bool cartilla, bool Disviajar, bool Disafuera,
+      string rangoEdad, string habilidad, string nombreUsuario, MySqlConnection connection)
         {
-            using (var conexionSql = new ConexionSql())
-            using (var conn = conexionSql.EstablecerConexion())
+            try
             {
-                conn.Open();
-                using (MySqlTransaction transaction = conn.BeginTransaction())
+                // Validar usuario y obtener CURP
+                string curpUsuario = null;
+                if (!ValidarUsuario(contrasena, out curpUsuario))
                 {
-                    try
+                    MessageBox.Show("El usuario o la contraseña no son válidos.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false; // Si la validación falla, retornar false
+                }
+
+                // Insertar en la tabla Vacante
+                try
+                {
+                    string queryVacante = @"
+            INSERT INTO Vacante (
+                CvcVacante, Vigencia, Tipo_de_vacante, Puesto_ofrecido, Turno_laboral, Salario_M, 
+                NO_plazas, Tipo_contrato, Horarios, Escolaridad, Otras_prestaciones, Estado_civil, 
+                Rango_edad, Habilidades, Sexo, Licencia_de_manejo, Cartilla, Disponible_viaje, 
+                Disponible_afuera, CvcDependencia, Curp_usuario
+            )
+            VALUES (
+                @CvcVacante, @Vigencia, @TipoVacante, @Puesto_ofrecido, @Turno_laboral, @Salario_M, 
+                @NO_plazas, @Tipo_contrato, @Horarios, @Escolaridad, @Otras_prestaciones, @Estado_civil, 
+                @Rango_edad, @Habilidades, @Sexo, @Licencia_de_manejo, @Cartilla, @Disponible_viaje, 
+                @Disponible_afuera, @CvcDependencia, @CurpUsuario
+            )";
+
+                    using (var commandVacante = new MySqlCommand(queryVacante, connection))
                     {
-                        // Insertar en la tabla Vacante
-                        string queryVacante = "INSERT INTO Vacante (CvcVacante, Vigencia, Otras_prestaciones, Estatus, Puesto_solicta, SalarioM, NoPla, Curp_usuario) " +
-                                              "VALUES (@CvcVacante, @Vigencia, @Prestaciones, @Estatus, @PuestoSolicita, @SalarioM, @NoPla, @CurpUsuario)";
+                        // Agregar los parámetros a la consulta
+                        commandVacante.Parameters.AddWithValue("@CvcVacante", cvcVacante);
+                        commandVacante.Parameters.AddWithValue("@Vigencia", vigencia);
+                        commandVacante.Parameters.AddWithValue("@Otras_prestaciones", prestaciones);
+                        commandVacante.Parameters.AddWithValue("@Tipo_contrato", tipocontrato);
+                        commandVacante.Parameters.AddWithValue("@Estado_civil", estatus);
+                        commandVacante.Parameters.AddWithValue("@TipoVacante", tipoVacante);
+                        commandVacante.Parameters.AddWithValue("@Puesto_ofrecido", puesto_ofrecido);
+                        commandVacante.Parameters.AddWithValue("@Turno_laboral", tipoEmp);
+                        commandVacante.Parameters.AddWithValue("@Salario_M", salarioM);
+                        commandVacante.Parameters.AddWithValue("@NO_plazas", no_pla);
+                        commandVacante.Parameters.AddWithValue("@Horarios", horas);
+                        commandVacante.Parameters.AddWithValue("@Escolaridad", escolaridad);
+                        commandVacante.Parameters.AddWithValue("@Sexo", sexo);
+                        commandVacante.Parameters.AddWithValue("@Licencia_de_manejo", licencia ? 1 : 0);
+                        commandVacante.Parameters.AddWithValue("@Cartilla", cartilla ? 1 : 0);
+                        commandVacante.Parameters.AddWithValue("@Disponible_viaje", Disviajar ? 1 : 0);
+                        commandVacante.Parameters.AddWithValue("@Disponible_afuera", Disafuera ? 1 : 0);
+                        commandVacante.Parameters.AddWithValue("@Rango_edad", rangoEdad);
+                        commandVacante.Parameters.AddWithValue("@Habilidades", habilidad);
+                        commandVacante.Parameters.AddWithValue("@CvcDependencia", cvcDependencia);
+                        commandVacante.Parameters.AddWithValue("@CurpUsuario", curpUsuario); // Usar el CURP obtenido
 
-                        using (MySqlCommand cmdVacante = new MySqlCommand(queryVacante, conn, transaction))
+                        int resultVacante = commandVacante.ExecuteNonQuery();
+
+                        if (resultVacante <= 0)
                         {
-                            cmdVacante.Parameters.AddWithValue("@CvcVacante", cvcVacante);
-                            cmdVacante.Parameters.AddWithValue("@Vigencia", vigencia);
-                            cmdVacante.Parameters.AddWithValue("@Prestaciones", prestaciones);
-                            cmdVacante.Parameters.AddWithValue("@Estatus", estatus);
-                            cmdVacante.Parameters.AddWithValue("@PuestoSolicita", puestoSolicita);
-                            cmdVacante.Parameters.AddWithValue("@SalarioM", salarioM);
-                            cmdVacante.Parameters.AddWithValue("@NoPla", no_pla);
-                            cmdVacante.Parameters.AddWithValue("@CurpUsuario", curpUsuario);
-                            cmdVacante.ExecuteNonQuery();
+                            MessageBox.Show("No se insertaron filas en la tabla Vacante. Verifique los datos e intente nuevamente.", "Error al insertar vacante", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false; // Si la inserción de Vacante falla, retornar false
                         }
-
-                        // Insertar en la tabla vacante_oferta_dependencia
-                        string queryOfertaDependencia = "INSERT INTO vacante_oferta_dependencia (CvcDependencia, Curp_usuario, SalarioM, No_pla, CvcVacante, Tipo, Modalidad, Horas) " +
-                                                          "VALUES (@CvcDependencia, @CurpUsuario, @SalarioM, @NoPla, @CvcVacante, @Tipo, @Modalidad, @Horas)";
-
-                        using (MySqlCommand cmdOfertaDependencia = new MySqlCommand(queryOfertaDependencia, conn, transaction))
-                        {
-                            cmdOfertaDependencia.Parameters.AddWithValue("@CurpUsuario", curpUsuario);
-                            cmdOfertaDependencia.Parameters.AddWithValue("@CvcVacante", cvcVacante);
-                            cmdOfertaDependencia.Parameters.AddWithValue("@Tipo", tipoEmp);
-                            cmdOfertaDependencia.Parameters.AddWithValue("@Modalidad", horas);
-                            cmdOfertaDependencia.Parameters.AddWithValue("@Horas", horas);
-                            cmdOfertaDependencia.ExecuteNonQuery();
-                        }
-
-                        // Insertar en la tabla requisitos
-                        string queryRequisitos = "INSERT INTO Requisitos (CvcVacante, Tipo_Vacante, Turno, Escolaridad, Sexo, Licencia_de_manejo, Cartilla, Experiencia, Rango_edad) " +
-                                                  "VALUES (@CvcVacante, @TipoVacante, @Turno, @Escolaridad, @Sexo, @Licencia, @Cartilla, @Experiencia, @RangoEdad)";
-
-                        using (MySqlCommand cmdRequisitos = new MySqlCommand(queryRequisitos, conn, transaction))
-                        {
-                            cmdRequisitos.Parameters.AddWithValue("@CvcVacante", cvcVacante);
-                            cmdRequisitos.Parameters.AddWithValue("@TipoVacante", tipoVacante);
-                            cmdRequisitos.Parameters.AddWithValue("@Turno", null); // Cambia según sea necesario
-                            cmdRequisitos.Parameters.AddWithValue("@Escolaridad", escolaridad);
-                            cmdRequisitos.Parameters.AddWithValue("@Sexo", sexo);
-                            cmdRequisitos.Parameters.AddWithValue("@Licencia", licencia);
-                            cmdRequisitos.Parameters.AddWithValue("@Cartilla", cartilla);
-                            cmdRequisitos.Parameters.AddWithValue("@Experiencia", null); // Cambia según sea necesario
-                            cmdRequisitos.Parameters.AddWithValue("@RangoEdad", rangoEdad);
-                            cmdRequisitos.ExecuteNonQuery();
-                        }
-
-                        // Confirmar la transacción si todo va bien
-                        transaction.Commit();
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        // Si ocurre un error, revertir la transacción
-                        transaction.Rollback();
-                        throw new Exception("Error al agregar vacante: " + ex.Message);
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al insertar en la tabla Vacante: " + ex.Message, "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                return true; // Si todo fue exitoso
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo un error inesperado: " + ex.Message, "Error general", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
-
         public bool ActualizarVacante(string cvcVacante, string curp, DateTime vigencia, string prestaciones, string estatus, string actividades, string puestoSolicita, string cvcDependencia, string curpUsuario)
         {
             ConexionSql conexionSql = new ConexionSql();
@@ -395,7 +446,6 @@ namespace SivilabApp
                 }
             }
         }
-
         public DataTable ConsultarVacantes()
         {
             ConexionSql conexionSql = new ConexionSql();
@@ -409,6 +459,45 @@ namespace SivilabApp
                     adapter.Fill(tablaVacantes);
                     return tablaVacantes;
                 }
+            }
+        }
+        public bool AgregarCita(string cvcCita, string curpSolicitante, string nombreCompleto,
+                        DateTime fecha, string hora, string curpUsuario, MySqlConnection connection)
+        {
+            try
+            {
+                // Aquí ya no es necesario validar la contraseña, ya se validó en el método btnGuardarCita_Click
+                // No necesitamos esta parte de validación aquí, solo usamos curpUsuario.
+
+                string queryCita = @"
+        INSERT INTO Citas (Cvc_Cita, Nombre_completo, Curp_Solicitante, Fecha, Hora, Curp_usuario)
+        VALUES (@Cvc_Cita, @NombreCompleto, @CurpSolicitante, @Fecha, @Hora, @Curp_usuario)";
+
+                using (var commandCita = new MySqlCommand(queryCita, connection))
+                {
+                    // Agregar los parámetros a la consulta
+                    commandCita.Parameters.AddWithValue("@Cvc_Cita", cvcCita);
+                    commandCita.Parameters.AddWithValue("@NombreCompleto", nombreCompleto);
+                    commandCita.Parameters.AddWithValue("@CurpSolicitante", curpSolicitante);
+                    commandCita.Parameters.AddWithValue("@Fecha", fecha);
+                    commandCita.Parameters.AddWithValue("@Hora", hora);
+                    commandCita.Parameters.AddWithValue("@Curp_usuario", curpUsuario);
+
+                    int resultCita = commandCita.ExecuteNonQuery();
+
+                    if (resultCita <= 0)
+                    {
+                        MessageBox.Show("No se insertaron filas en la tabla Citas. Verifique los datos e intente nuevamente.", "Error al insertar cita", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false; // Si la inserción de Cita falla, retornar false
+                    }
+                }
+
+                return true; // Si todo fue exitoso
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Se produjo un error inesperado: " + ex.Message, "Error general", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false; // Si ocurrió un error inesperado, retornar false
             }
         }
     }

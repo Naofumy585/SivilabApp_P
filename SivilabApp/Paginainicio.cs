@@ -114,7 +114,17 @@ namespace SivilabApp
 
         private void btnEventos_Click(object sender, EventArgs e)
         {
-          
+            //Crear una instancia del formulario FVacantes
+            RegistroEvento formEventos = new RegistroEvento();
+
+            //Mostrar el Formulario
+            formEventos.Show();
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Reportes formreportes = new Reportes();
+            formreportes.Show();
         }
     }
 }

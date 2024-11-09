@@ -51,12 +51,30 @@
             this.Curp = new System.Windows.Forms.TextBox();
             this.Correo = new System.Windows.Forms.TextBox();
             this.Fecha_Nacimiento = new System.Windows.Forms.DateTimePicker();
-            this.Escolaridad = new System.Windows.Forms.TextBox();
             this.Telefono = new System.Windows.Forms.TextBox();
             this.Direccion = new System.Windows.Forms.TextBox();
             this.Genero = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CvcCedula = new System.Windows.Forms.TextBox();
+            this.Escolaridad = new System.Windows.Forms.ComboBox();
+            this.Estado = new System.Windows.Forms.ComboBox();
+            this.Colonia = new System.Windows.Forms.ComboBox();
+            this.Calle = new System.Windows.Forms.TextBox();
+            this.Ciudad = new System.Windows.Forms.ComboBox();
+            this.Codigo_Postal = new System.Windows.Forms.TextBox();
+            this.No_ext = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.Estado_migratori = new System.Windows.Forms.ComboBox();
+            this.nacioanlidad = new System.Windows.Forms.Label();
+            this.Contrasena_usuario = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.Cvcvacante = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +105,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Location = new System.Drawing.Point(53, 68);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(444, 455);
+            this.pictureBox1.Size = new System.Drawing.Size(616, 455);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
@@ -218,7 +236,7 @@
             // 
             this.BtnGuardarsolicitante.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnGuardarsolicitante.ForeColor = System.Drawing.Color.Blue;
-            this.BtnGuardarsolicitante.Location = new System.Drawing.Point(213, 529);
+            this.BtnGuardarsolicitante.Location = new System.Drawing.Point(311, 529);
             this.BtnGuardarsolicitante.Name = "BtnGuardarsolicitante";
             this.BtnGuardarsolicitante.Size = new System.Drawing.Size(97, 46);
             this.BtnGuardarsolicitante.TabIndex = 28;
@@ -275,13 +293,6 @@
             this.Fecha_Nacimiento.Size = new System.Drawing.Size(210, 20);
             this.Fecha_Nacimiento.TabIndex = 35;
             // 
-            // Escolaridad
-            // 
-            this.Escolaridad.Location = new System.Drawing.Point(211, 319);
-            this.Escolaridad.Name = "Escolaridad";
-            this.Escolaridad.Size = new System.Drawing.Size(210, 20);
-            this.Escolaridad.TabIndex = 36;
-            // 
             // Telefono
             // 
             this.Telefono.Location = new System.Drawing.Point(213, 390);
@@ -326,17 +337,276 @@
             this.CvcCedula.Size = new System.Drawing.Size(210, 20);
             this.CvcCedula.TabIndex = 42;
             // 
+            // Escolaridad
+            // 
+            this.Escolaridad.FormattingEnabled = true;
+            this.Escolaridad.Items.AddRange(new object[] {
+            "Universitario",
+            "Bachiller",
+            "Secundaria",
+            "Licenciatura"});
+            this.Escolaridad.Location = new System.Drawing.Point(211, 321);
+            this.Escolaridad.Name = "Escolaridad";
+            this.Escolaridad.Size = new System.Drawing.Size(210, 21);
+            this.Escolaridad.TabIndex = 43;
+            // 
+            // Estado
+            // 
+            this.Estado.AutoCompleteCustomSource.AddRange(new string[] {
+            "NINGUNA",
+            "PRIMARIA",
+            "SECUNDARIA",
+            "SUPERIOR"});
+            this.Estado.DisplayMember = "hh";
+            this.Estado.FormattingEnabled = true;
+            this.Estado.Items.AddRange(new object[] {
+            "Aguascalientes",
+            "Baja California",
+            "Baja California Sur",
+            "Campeche ",
+            "Chiapas",
+            "Chihuahua",
+            "Ciudad de México",
+            "Coahuila",
+            "Colima",
+            "Durango",
+            "Estado de México",
+            "Guanajuato",
+            "Guerrero",
+            "Hidalgo",
+            "Jalisco",
+            "Michoacán",
+            "Morelos",
+            "Nayarit",
+            "Nuevo León",
+            "Oaxaca",
+            "Puebla",
+            "Querétaro",
+            "Quintana Roo ",
+            "San Luis Potosí",
+            "Sinaloa",
+            "Sonora ",
+            "Tabasco ",
+            "Tamaulipas ",
+            "Tlaxcala ",
+            "Veracruz ",
+            "Yucatán ",
+            "Zacatecas"});
+            this.Estado.Location = new System.Drawing.Point(511, 87);
+            this.Estado.Name = "Estado";
+            this.Estado.Size = new System.Drawing.Size(141, 21);
+            this.Estado.TabIndex = 151;
+            // 
+            // Colonia
+            // 
+            this.Colonia.AutoCompleteCustomSource.AddRange(new string[] {
+            "NINGUNA",
+            "PRIMARIA",
+            "SECUNDARIA",
+            "SUPERIOR"});
+            this.Colonia.FormattingEnabled = true;
+            this.Colonia.Items.AddRange(new object[] {
+            "Barrio San Francisco",
+            "Xamaipak",
+            "Centro Poniente",
+            "Centro Oriente",
+            "Quinta norte"});
+            this.Colonia.Location = new System.Drawing.Point(511, 125);
+            this.Colonia.Name = "Colonia";
+            this.Colonia.Size = new System.Drawing.Size(141, 21);
+            this.Colonia.TabIndex = 152;
+            // 
+            // Calle
+            // 
+            this.Calle.Location = new System.Drawing.Point(511, 164);
+            this.Calle.Name = "Calle";
+            this.Calle.Size = new System.Drawing.Size(141, 20);
+            this.Calle.TabIndex = 153;
+            this.Calle.TextChanged += new System.EventHandler(this.calle_TextChanged);
+            // 
+            // Ciudad
+            // 
+            this.Ciudad.AutoCompleteCustomSource.AddRange(new string[] {
+            "NINGUNA",
+            "PRIMARIA",
+            "SECUNDARIA",
+            "SUPERIOR"});
+            this.Ciudad.FormattingEnabled = true;
+            this.Ciudad.Items.AddRange(new object[] {
+            "Tuxtla Gutierrez",
+            "San Cristóbal de las Casas",
+            "Tapachula",
+            "Palenque",
+            "Comitan",
+            "Chiapa de Corzo",
+            "Yajalon"});
+            this.Ciudad.Location = new System.Drawing.Point(511, 198);
+            this.Ciudad.Name = "Ciudad";
+            this.Ciudad.Size = new System.Drawing.Size(141, 21);
+            this.Ciudad.TabIndex = 154;
+            // 
+            // Codigo_Postal
+            // 
+            this.Codigo_Postal.Location = new System.Drawing.Point(511, 231);
+            this.Codigo_Postal.Name = "Codigo_Postal";
+            this.Codigo_Postal.Size = new System.Drawing.Size(141, 20);
+            this.Codigo_Postal.TabIndex = 155;
+            // 
+            // No_ext
+            // 
+            this.No_ext.Location = new System.Drawing.Point(511, 259);
+            this.No_ext.Name = "No_ext";
+            this.No_ext.Size = new System.Drawing.Size(141, 20);
+            this.No_ext.TabIndex = 156;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(462, 91);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(43, 13);
+            this.label17.TabIndex = 157;
+            this.label17.Text = "Estado:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(460, 133);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(45, 13);
+            this.label14.TabIndex = 158;
+            this.label14.Text = "Colonia:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(460, 168);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(30, 13);
+            this.label15.TabIndex = 159;
+            this.label15.Text = "Calle";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(433, 238);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(72, 13);
+            this.label16.TabIndex = 160;
+            this.label16.Text = "Codigo Postal";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(460, 206);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(48, 13);
+            this.label18.TabIndex = 161;
+            this.label18.Text = "Ciiudad: ";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label19.Location = new System.Drawing.Point(460, 264);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 13);
+            this.label19.TabIndex = 162;
+            this.label19.Text = "No_exte:";
+            // 
+            // Estado_migratori
+            // 
+            this.Estado_migratori.FormattingEnabled = true;
+            this.Estado_migratori.Items.AddRange(new object[] {
+            "FEMENINO",
+            "MASCULINO"});
+            this.Estado_migratori.Location = new System.Drawing.Point(511, 303);
+            this.Estado_migratori.Name = "Estado_migratori";
+            this.Estado_migratori.Size = new System.Drawing.Size(141, 21);
+            this.Estado_migratori.TabIndex = 163;
+            // 
+            // nacioanlidad
+            // 
+            this.nacioanlidad.AutoSize = true;
+            this.nacioanlidad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nacioanlidad.Location = new System.Drawing.Point(439, 306);
+            this.nacioanlidad.Name = "nacioanlidad";
+            this.nacioanlidad.Size = new System.Drawing.Size(69, 13);
+            this.nacioanlidad.TabIndex = 164;
+            this.nacioanlidad.Text = "Nacionalidad";
+            // 
+            // Contrasena_usuario
+            // 
+            this.Contrasena_usuario.Location = new System.Drawing.Point(511, 489);
+            this.Contrasena_usuario.Name = "Contrasena_usuario";
+            this.Contrasena_usuario.Size = new System.Drawing.Size(141, 20);
+            this.Contrasena_usuario.TabIndex = 165;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label20.Location = new System.Drawing.Point(524, 471);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(110, 13);
+            this.label20.TabIndex = 166;
+            this.label20.Text = "Ingresa tu contraseña";
+            // 
+            // Cvcvacante
+            // 
+            this.Cvcvacante.FormattingEnabled = true;
+            this.Cvcvacante.Items.AddRange(new object[] {
+            "UNIgejoME"});
+            this.Cvcvacante.Location = new System.Drawing.Point(511, 389);
+            this.Cvcvacante.Name = "Cvcvacante";
+            this.Cvcvacante.Size = new System.Drawing.Size(141, 21);
+            this.Cvcvacante.TabIndex = 167;
+            this.Cvcvacante.SelectedIndexChanged += new System.EventHandler(this.Cvcvacante_SelectedIndexChanged);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label21.Location = new System.Drawing.Point(524, 357);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(96, 13);
+            this.label21.TabIndex = 168;
+            this.label21.Text = "Folio Dependencia";
+            // 
             // RegistrarSolicitante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 587);
+            this.ClientSize = new System.Drawing.Size(681, 587);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.Cvcvacante);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.Contrasena_usuario);
+            this.Controls.Add(this.nacioanlidad);
+            this.Controls.Add(this.Estado_migratori);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.No_ext);
+            this.Controls.Add(this.Codigo_Postal);
+            this.Controls.Add(this.Ciudad);
+            this.Controls.Add(this.Calle);
+            this.Controls.Add(this.Colonia);
+            this.Controls.Add(this.Estado);
+            this.Controls.Add(this.Escolaridad);
             this.Controls.Add(this.CvcCedula);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.Genero);
             this.Controls.Add(this.Direccion);
             this.Controls.Add(this.Telefono);
-            this.Controls.Add(this.Escolaridad);
             this.Controls.Add(this.Fecha_Nacimiento);
             this.Controls.Add(this.Correo);
             this.Controls.Add(this.Curp);
@@ -393,11 +663,29 @@
         private System.Windows.Forms.TextBox Curp;
         private System.Windows.Forms.TextBox Correo;
         private System.Windows.Forms.DateTimePicker Fecha_Nacimiento;
-        private System.Windows.Forms.TextBox Escolaridad;
         private System.Windows.Forms.TextBox Telefono;
         private System.Windows.Forms.TextBox Direccion;
         private System.Windows.Forms.ComboBox Genero;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox CvcCedula;
+        private System.Windows.Forms.ComboBox Escolaridad;
+        private System.Windows.Forms.ComboBox Estado;
+        private System.Windows.Forms.ComboBox Colonia;
+        private System.Windows.Forms.TextBox Calle;
+        private System.Windows.Forms.ComboBox Ciudad;
+        private System.Windows.Forms.TextBox Codigo_Postal;
+        private System.Windows.Forms.TextBox No_ext;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox Estado_migratori;
+        private System.Windows.Forms.Label nacioanlidad;
+        private System.Windows.Forms.TextBox Contrasena_usuario;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox Cvcvacante;
+        private System.Windows.Forms.Label label21;
     }
 }

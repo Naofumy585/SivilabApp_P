@@ -162,7 +162,7 @@ namespace SivilabApp
             // 
             // Nombre
             // 
-            this.Nombre.Location = new System.Drawing.Point(192, 158);
+            this.Nombre.Location = new System.Drawing.Point(205, 158);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(436, 20);
             this.Nombre.TabIndex = 99;
@@ -323,9 +323,9 @@ namespace SivilabApp
             this.Cuenta.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Cuenta.Location = new System.Drawing.Point(527, 194);
             this.Cuenta.Name = "Cuenta";
-            this.Cuenta.Size = new System.Drawing.Size(44, 13);
+            this.Cuenta.Size = new System.Drawing.Size(56, 13);
             this.Cuenta.TabIndex = 128;
-            this.Cuenta.Text = "Cuenta:";
+            this.Cuenta.Text = "Password:";
             // 
             // label9
             // 
@@ -463,6 +463,7 @@ namespace SivilabApp
             this.No_ext.Name = "No_ext";
             this.No_ext.Size = new System.Drawing.Size(50, 20);
             this.No_ext.TabIndex = 149;
+            this.No_ext.TextChanged += new System.EventHandler(this.No_ext_TextChanged);
             // 
             // Estado
             // 
