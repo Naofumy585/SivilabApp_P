@@ -34,25 +34,29 @@ namespace SivilabApp
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
-            this.cbxCartilla = new System.Windows.Forms.ComboBox();
+            this.Responsable_evento = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.cbxGenero = new System.Windows.Forms.ComboBox();
+            this.Tipo = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.cbxEdoCivil = new System.Windows.Forms.ComboBox();
+            this.Escuela = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.txbSalarioMensual = new System.Windows.Forms.TextBox();
+            this.Descripcion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Fecha_registro = new System.Windows.Forms.DateTimePicker();
+            this.Fecha_evento = new System.Windows.Forms.DateTimePicker();
+            this.NombreEvento = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Direccion = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Contrasena_usuario = new System.Windows.Forms.TextBox();
+            this.Observaciones = new System.Windows.Forms.TextBox();
+            this.Observaciones_evento = new System.Windows.Forms.TextBox();
+            this.Direccion_evento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +91,7 @@ namespace SivilabApp
             this.button1.TabIndex = 92;
             this.button1.Text = "GUARDAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label22
             // 
@@ -97,21 +102,21 @@ namespace SivilabApp
             this.label22.Size = new System.Drawing.Size(0, 13);
             this.label22.TabIndex = 86;
             // 
-            // cbxCartilla
+            // Responsable_evento
             // 
-            this.cbxCartilla.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Responsable_evento.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.cbxCartilla.FormattingEnabled = true;
-            this.cbxCartilla.Items.AddRange(new object[] {
+            this.Responsable_evento.FormattingEnabled = true;
+            this.Responsable_evento.Items.AddRange(new object[] {
             "MILITAR",
             "NINGUNA"});
-            this.cbxCartilla.Location = new System.Drawing.Point(181, 330);
-            this.cbxCartilla.Name = "cbxCartilla";
-            this.cbxCartilla.Size = new System.Drawing.Size(122, 21);
-            this.cbxCartilla.TabIndex = 85;
+            this.Responsable_evento.Location = new System.Drawing.Point(181, 330);
+            this.Responsable_evento.Name = "Responsable_evento";
+            this.Responsable_evento.Size = new System.Drawing.Size(122, 21);
+            this.Responsable_evento.TabIndex = 85;
             // 
             // label21
             // 
@@ -123,23 +128,23 @@ namespace SivilabApp
             this.label21.TabIndex = 84;
             this.label21.Text = "Responsable:";
             // 
-            // cbxGenero
+            // Tipo
             // 
-            this.cbxGenero.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Tipo.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.cbxGenero.FormattingEnabled = true;
-            this.cbxGenero.Items.AddRange(new object[] {
+            this.Tipo.FormattingEnabled = true;
+            this.Tipo.Items.AddRange(new object[] {
             "FEMENINO",
             "MASCULINO",
             "AMBOS"});
-            this.cbxGenero.Location = new System.Drawing.Point(181, 277);
-            this.cbxGenero.Name = "cbxGenero";
-            this.cbxGenero.Size = new System.Drawing.Size(122, 21);
-            this.cbxGenero.TabIndex = 81;
-            this.cbxGenero.SelectedIndexChanged += new System.EventHandler(this.cbxGenero_SelectedIndexChanged);
+            this.Tipo.Location = new System.Drawing.Point(181, 277);
+            this.Tipo.Name = "Tipo";
+            this.Tipo.Size = new System.Drawing.Size(122, 21);
+            this.Tipo.TabIndex = 81;
+            this.Tipo.SelectedIndexChanged += new System.EventHandler(this.cbxGenero_SelectedIndexChanged);
             // 
             // label19
             // 
@@ -151,22 +156,22 @@ namespace SivilabApp
             this.label19.TabIndex = 80;
             this.label19.Text = "Tipo de Evento:";
             // 
-            // cbxEdoCivil
+            // Escuela
             // 
-            this.cbxEdoCivil.AutoCompleteCustomSource.AddRange(new string[] {
+            this.Escuela.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.cbxEdoCivil.FormattingEnabled = true;
-            this.cbxEdoCivil.Items.AddRange(new object[] {
+            this.Escuela.FormattingEnabled = true;
+            this.Escuela.Items.AddRange(new object[] {
             "SOLTERO",
             "CASADO",
             "UNION LIBRE"});
-            this.cbxEdoCivil.Location = new System.Drawing.Point(181, 380);
-            this.cbxEdoCivil.Name = "cbxEdoCivil";
-            this.cbxEdoCivil.Size = new System.Drawing.Size(122, 21);
-            this.cbxEdoCivil.TabIndex = 79;
+            this.Escuela.Location = new System.Drawing.Point(181, 380);
+            this.Escuela.Name = "Escuela";
+            this.Escuela.Size = new System.Drawing.Size(122, 21);
+            this.Escuela.TabIndex = 79;
             // 
             // label18
             // 
@@ -188,12 +193,12 @@ namespace SivilabApp
             this.label17.TabIndex = 76;
             this.label17.Text = "Unidad Enlace:";
             // 
-            // txbSalarioMensual
+            // Descripcion
             // 
-            this.txbSalarioMensual.Location = new System.Drawing.Point(181, 155);
-            this.txbSalarioMensual.Name = "txbSalarioMensual";
-            this.txbSalarioMensual.Size = new System.Drawing.Size(291, 20);
-            this.txbSalarioMensual.TabIndex = 66;
+            this.Descripcion.Location = new System.Drawing.Point(181, 155);
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Size = new System.Drawing.Size(291, 20);
+            this.Descripcion.TabIndex = 66;
             // 
             // label10
             // 
@@ -228,36 +233,36 @@ namespace SivilabApp
             this.label8.Text = "Fecha de Registro";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // dateTimePicker1
+            // Fecha_registro
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(190, 106);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 20);
-            this.dateTimePicker1.TabIndex = 93;
+            this.Fecha_registro.Location = new System.Drawing.Point(190, 106);
+            this.Fecha_registro.Name = "Fecha_registro";
+            this.Fecha_registro.Size = new System.Drawing.Size(210, 20);
+            this.Fecha_registro.TabIndex = 93;
             // 
-            // dateTimePicker2
+            // Fecha_evento
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(602, 105);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(210, 20);
-            this.dateTimePicker2.TabIndex = 94;
+            this.Fecha_evento.Location = new System.Drawing.Point(602, 105);
+            this.Fecha_evento.Name = "Fecha_evento";
+            this.Fecha_evento.Size = new System.Drawing.Size(210, 20);
+            this.Fecha_evento.TabIndex = 94;
             // 
-            // comboBox1
+            // NombreEvento
             // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.NombreEvento.AutoCompleteCustomSource.AddRange(new string[] {
             "NINGUNA",
             "PRIMARIA",
             "SECUNDARIA",
             "SUPERIOR"});
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.NombreEvento.FormattingEnabled = true;
+            this.NombreEvento.Items.AddRange(new object[] {
             "FEMENINO",
             "MASCULINO",
             "AMBOS"});
-            this.comboBox1.Location = new System.Drawing.Point(181, 214);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 21);
-            this.comboBox1.TabIndex = 95;
+            this.NombreEvento.Location = new System.Drawing.Point(181, 214);
+            this.NombreEvento.Name = "NombreEvento";
+            this.NombreEvento.Size = new System.Drawing.Size(202, 21);
+            this.NombreEvento.TabIndex = 95;
             // 
             // label2
             // 
@@ -269,15 +274,6 @@ namespace SivilabApp
             this.label2.TabIndex = 96;
             this.label2.Text = "Observaciones:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(162, 429);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(510, 66);
-            this.dataGridView1.TabIndex = 97;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -288,26 +284,82 @@ namespace SivilabApp
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // Direccion
+            // 
+            this.Direccion.AutoSize = true;
+            this.Direccion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Direccion.Location = new System.Drawing.Point(661, 403);
+            this.Direccion.Name = "Direccion";
+            this.Direccion.Size = new System.Drawing.Size(103, 13);
+            this.Direccion.TabIndex = 99;
+            this.Direccion.Text = "Direccion de evento";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(623, 162);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 101;
+            this.label3.Text = "Contraseña";
+            // 
+            // Contrasena_usuario
+            // 
+            this.Contrasena_usuario.Location = new System.Drawing.Point(690, 159);
+            this.Contrasena_usuario.Name = "Contrasena_usuario";
+            this.Contrasena_usuario.Size = new System.Drawing.Size(126, 20);
+            this.Contrasena_usuario.TabIndex = 102;
+            // 
+            // Observaciones
+            // 
+            this.Observaciones.Location = new System.Drawing.Point(162, 432);
+            this.Observaciones.Multiline = true;
+            this.Observaciones.Name = "Observaciones";
+            this.Observaciones.Size = new System.Drawing.Size(291, 63);
+            this.Observaciones.TabIndex = 103;
+            // 
+            // Observaciones_evento
+            // 
+            this.Observaciones_evento.Location = new System.Drawing.Point(163, 443);
+            this.Observaciones_evento.Multiline = true;
+            this.Observaciones_evento.Name = "Observaciones_evento";
+            this.Observaciones_evento.Size = new System.Drawing.Size(291, 63);
+            this.Observaciones_evento.TabIndex = 103;
+            // 
+            // Direccion_evento
+            // 
+            this.Direccion_evento.Location = new System.Drawing.Point(568, 432);
+            this.Direccion_evento.Multiline = true;
+            this.Direccion_evento.Name = "Direccion_evento";
+            this.Direccion_evento.Size = new System.Drawing.Size(291, 74);
+            this.Direccion_evento.TabIndex = 104;
+            // 
             // RegistroEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 588);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Direccion_evento);
+            this.Controls.Add(this.Observaciones_evento);
+            this.Controls.Add(this.Observaciones);
+            this.Controls.Add(this.Contrasena_usuario);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Direccion);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.NombreEvento);
+            this.Controls.Add(this.Fecha_evento);
+            this.Controls.Add(this.Fecha_registro);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.cbxCartilla);
+            this.Controls.Add(this.Responsable_evento);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.cbxGenero);
+            this.Controls.Add(this.Tipo);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.cbxEdoCivil);
+            this.Controls.Add(this.Escuela);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txbSalarioMensual);
+            this.Controls.Add(this.Descripcion);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -317,7 +369,6 @@ namespace SivilabApp
             this.Name = "RegistroEvento";
             this.Text = "RegistroEvento";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -329,22 +380,27 @@ namespace SivilabApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox cbxCartilla;
+        private System.Windows.Forms.ComboBox Responsable_evento;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox cbxGenero;
+        private System.Windows.Forms.ComboBox Tipo;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox cbxEdoCivil;
+        private System.Windows.Forms.ComboBox Escuela;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txbSalarioMensual;
+        private System.Windows.Forms.TextBox Descripcion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker Fecha_registro;
+        private System.Windows.Forms.DateTimePicker Fecha_evento;
+        private System.Windows.Forms.ComboBox NombreEvento;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label Direccion;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Contrasena_usuario;
+        private System.Windows.Forms.TextBox Observaciones;
+        private System.Windows.Forms.TextBox Observaciones_evento;
+        private System.Windows.Forms.TextBox Direccion_evento;
     }
 }

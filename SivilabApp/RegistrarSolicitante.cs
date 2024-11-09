@@ -238,26 +238,7 @@ namespace SivilabApp
                 MessageBox.Show($"Se produjo un error al cargar las vacantes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void ObtenerCvcVacanteSeleccionado()
-        {
-            // Verificar si hay algún item seleccionado en el ComboBox
-            if (Cvcvacante.SelectedItem != null)
-            {
-                // Obtener el KeyValuePair seleccionado
-                var selectedItem = (KeyValuePair<string, string>)Cvcvacante.SelectedItem;
-
-                // Obtener el CvcVacante (Folio) y el Puesto_ofrecido
-                string cvcVacanteSeleccionado = selectedItem.Key;  // CvcVacante (Folio)
-                string puestoSeleccionado = selectedItem.Value;    // Puesto_ofrecido
-
-                // Usar el CvcVacante seleccionado
-                MessageBox.Show($"Folio seleccionado: {cvcVacanteSeleccionado}\nPuesto: {puestoSeleccionado}");
-            }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado ninguna vacante.");
-            }
-        }
+      
         private void Cvcvacante_SelectedIndexChanged(object sender, EventArgs e)
         {
 

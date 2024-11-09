@@ -500,5 +500,69 @@ namespace SivilabApp
                 return false; // Si ocurrió un error inesperado, retornar false
             }
         }
+        public bool AgregarEvento(string folio,
+     DateTime fechaRegistro, string descripcion, string nombreEvento, string tipo, string responsableEvento,
+     string escuela, string observaciones, string direccionEvento, DateTime fechaEvento, string curpUsuario,
+     string nombreUsuario, MySqlConnection connection)
+        {
+            try
+            {
+                // Consulta SQL para insertar el evento
+                string query = @"
+        INSERT INTO Eventos (
+           Folio_Evento, Fecha_registro, Descripcion, NombreEvento, Tipo, Responsable_evento, Escuela, Observaciones,
+            Direccion_evento, Fecha_evento, Curp_Usuario
+        )
+        VALUES (
+             @Folio_Evento, @FechaRegistro, @Descripcion, @NombreEvento, @Tipo, @ResponsableEvento, @Escuela, @Observaciones,
+            @DireccionEvento, @FechaEvento, @CurpUsuario
+        )";
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    // Agregar los parámetros de la consulta
+                    command.Parameters.AddWithValue("@Folio_Evento", folio);
+                    command.Parameters.AddWithValue("@FechaRegistro", fechaRegistro);
+                    command.Parameters.AddWithValue("@Descripcion", descripcion);
+                    command.Parameters.AddWithValue("@NombreEvento", nombreEvento);
+                    command.Parameters.AddWithValue("@Tipo", tipo);
+                    command.Parameters.AddWithValue("@ResponsableEvento", responsableEvento);
+                    command.Parameters.AddWithValue("@Escuela", escuela);
+                    command.Parameters.AddWithValue("@Observaciones", observaciones);
+                    command.Parameters.AddWithValue("@DireccionEvento", direccionEvento);
+                    command.Parameters.AddWithValue("@FechaEvento", fechaEvento);
+                    command.Parameters.AddWithValue("@CurpUsuario", curpUsuario);
+
+                    // Ejecutar la consulta de inserción
+                    int result = command.ExecuteNonQuery();
+
+                    return result > 0;  // Si el número de filas afectadas es mayor a 0, la inserción fue exitosa
+                }
+            }
+            catch (MySqlException sqlEx)
+            {
+                // Errores específicos de MySQL
+                MessageBox.Show($"Error al interactuar con la base de datos: {sqlEx.Message}", "Error de SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch (InvalidOperationException invOpEx)
+            {
+                // Errores de operación no válida, por ejemplo, si la conexión no está abierta
+                MessageBox.Show($"Operación no válida: {invOpEx.Message}", "Error de Operación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch (ArgumentException argEx)
+            {
+                // Errores de argumentos, por ejemplo, si alguno de los parámetros es inválido
+                MessageBox.Show($"Error en los argumentos: {argEx.Message}", "Error de Argumento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                // Manejo de cualquier otra excepción general
+                MessageBox.Show($"Error al agregar el evento: {ex.Message}", "Error de Inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
     }
 }

@@ -37,19 +37,20 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ApellidoPaterno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ApellidoMaterno = new System.Windows.Forms.TextBox();
             this.lbNombre = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Nombre_solicitante = new System.Windows.Forms.TextBox();
+            this.Solicitud_resultado = new System.Windows.Forms.DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.Busqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Solicitud_resultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,6 +113,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(741, 320);
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label2
             // 
@@ -134,12 +136,12 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Apellido Paterno";
             // 
-            // textBox1
+            // ApellidoPaterno
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 255);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 17;
+            this.ApellidoPaterno.Location = new System.Drawing.Point(129, 255);
+            this.ApellidoPaterno.Name = "ApellidoPaterno";
+            this.ApellidoPaterno.Size = new System.Drawing.Size(100, 20);
+            this.ApellidoPaterno.TabIndex = 17;
             // 
             // label4
             // 
@@ -151,12 +153,12 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Apellido Materno";
             // 
-            // textBox2
+            // ApellidoMaterno
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 281);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 19;
+            this.ApellidoMaterno.Location = new System.Drawing.Point(129, 281);
+            this.ApellidoMaterno.Name = "ApellidoMaterno";
+            this.ApellidoMaterno.Size = new System.Drawing.Size(100, 20);
+            this.ApellidoMaterno.TabIndex = 19;
             // 
             // lbNombre
             // 
@@ -168,20 +170,20 @@
             this.lbNombre.TabIndex = 20;
             this.lbNombre.Text = "Nombre";
             // 
-            // textBox3
+            // Nombre_solicitante
             // 
-            this.textBox3.Location = new System.Drawing.Point(111, 306);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 21;
+            this.Nombre_solicitante.Location = new System.Drawing.Point(111, 306);
+            this.Nombre_solicitante.Name = "Nombre_solicitante";
+            this.Nombre_solicitante.Size = new System.Drawing.Size(100, 20);
+            this.Nombre_solicitante.TabIndex = 21;
             // 
-            // dataGridView1
+            // Solicitud_resultado
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(129, 381);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(473, 98);
-            this.dataGridView1.TabIndex = 22;
+            this.Solicitud_resultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Solicitud_resultado.Location = new System.Drawing.Point(51, 381);
+            this.Solicitud_resultado.Name = "Solicitud_resultado";
+            this.Solicitud_resultado.Size = new System.Drawing.Size(679, 126);
+            this.Solicitud_resultado.TabIndex = 22;
             // 
             // pictureBox5
             // 
@@ -202,6 +204,15 @@
             this.btnBuscar.TabIndex = 24;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // Busqueda
+            // 
+            this.Busqueda.Location = new System.Drawing.Point(472, 274);
+            this.Busqueda.Name = "Busqueda";
+            this.Busqueda.Size = new System.Drawing.Size(184, 20);
+            this.Busqueda.TabIndex = 25;
+            this.Busqueda.TextChanged += new System.EventHandler(this.Busqueda_TextChanged);
             // 
             // FSolicitante
             // 
@@ -209,14 +220,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(800, 545);
+            this.Controls.Add(this.Busqueda);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.Solicitud_resultado);
+            this.Controls.Add(this.Nombre_solicitante);
             this.Controls.Add(this.lbNombre);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ApellidoMaterno);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ApellidoPaterno);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
@@ -227,11 +239,12 @@
             this.Controls.Add(this.pictureBox4);
             this.Name = "FSolicitante";
             this.Text = "FSolicitante";
+            this.Load += new System.EventHandler(this.FSolicitante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Solicitud_resultado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -248,13 +261,14 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ApellidoPaterno;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ApellidoMaterno;
         private System.Windows.Forms.Label lbNombre;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox Nombre_solicitante;
+        private System.Windows.Forms.DataGridView Solicitud_resultado;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox Busqueda;
     }
 }
